@@ -122,6 +122,68 @@
             background-color: #2d7dd2;
         }
 
+        .button-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: #1a4a4a;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background-color 0.25s ease, color 0.25s ease;
+            border: 1.5px solid #1a4a4a;
+            cursor: pointer;
+            margin-left: 12px;
+        }
+
+        .button-secondary:hover {
+            background-color: #1a4a4a;
+            color: #ffffff;
+        }
+
+        @media (max-width: 640px) {
+            .button-secondary {
+                margin-left: 0;
+                margin-top: 12px;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .hero-proof {
+            font-size: 13px;
+            color: #556;
+            margin: 0 0 18px 0;
+            padding: 10px 14px;
+            background: #f1f5f7;
+            border-left: 3px solid #1a4a4a;
+            border-radius: 4px;
+            max-width: 640px;
+        }
+
+        .laudo-preview-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .laudo-preview-link:hover .laudo-preview {
+            box-shadow: 0 8px 24px rgba(26, 74, 74, 0.18);
+            transform: translateY(-2px);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .laudo-preview-cta {
+            display: block;
+            text-align: center;
+            font-size: 13px;
+            color: #2d7dd2;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
         .microcopy {
             font-size: 13px;
             color: #888888;
@@ -861,10 +923,13 @@
                 <h1>Você pode ser bom no que faz e ainda estar sendo descartado antes de um recrutador ler seu currículo.</h1>
                 <p class="hero-subtitle">O Radar de Perfil é uma auditoria técnica de currículo e perfil profissional que mostra se o seu CV passa nos filtros automáticos (ATS), onde está falhando na triagem e o que corrigir primeiro para reduzir descarte e aumentar sua competitividade.</p>
                 <div class="hero-support-line">Laudo em PDF · entrega por e-mail · sem call · sem coaching · até 3 dias úteis</div>
+                <div class="hero-proof">Rubrica técnica calibrada em 8 dimensões, com critérios auditáveis. Cada trecho do seu currículo é avaliado contra um padrão explícito, não contra opinião genérica.</div>
                 <a href="https://pay.kiwify.com.br/YGGuE57" class="button button-large">Quero meu laudo →</a>
+                <a href="/laudo-exemplo.html" class="button-secondary" target="_blank" rel="noopener">Ver laudo de exemplo</a>
                 <div class="microcopy">R$297 · sem call · sem coaching · entrega por e-mail em até 3 dias úteis</div>
                 <div class="microcopy">Diagnóstico técnico. Não é ferramenta automática gratuita.</div>
             </div>
+            <a href="/laudo-exemplo.html" class="laudo-preview-link" target="_blank" rel="noopener" aria-label="Abrir laudo de exemplo completo">
             <div class="laudo-preview">
                 <div class="laudo-header">
                     <div class="laudo-header-title">RADAR DE PERFIL</div>
@@ -903,6 +968,8 @@
                 </div>
                 <div class="laudo-footer-fade"></div>
             </div>
+            <span class="laudo-preview-cta">Clique para abrir o laudo de exemplo completo →</span>
+            </a>
         </div>
     </div>
 </section>

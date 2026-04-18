@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Laudo de exemplo — Radar de Perfil</title>
+    <meta name="description" content="Exemplo de laudo técnico entregue pelo Radar de Perfil. Auditoria de currículo e perfil profissional em 8 dimensões.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .topbar {
+            background-color: #1a4a4a;
+            color: #ffffff;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .topbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .topbar-brand {
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .topbar-back {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .topbar-back:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .intro {
+            max-width: 760px;
+            margin: 48px auto 24px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+
+        .intro-note {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .gallery {
+            max-width: 900px;
+            margin: 24px auto 48px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .gallery figure {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
+            height: auto;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: none;
+        }
+
+        .gallery figcaption {
+            padding: 10px 16px;
+            background-color: #f7f8fa;
+            color: #6b7280;
+            font-size: 0.85rem;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .cta-box {
+            max-width: 760px;
+            margin: 32px auto 48px;
+            padding: 32px 24px;
+            background-color: #1a4a4a;
+            color: #ffffff;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cta-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #1a4a4a;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-microcopy {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-top: 12px;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #9ca3af;
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .intro h1 {
+                font-size: 1.3rem;
+            }
+
+            .topbar-brand {
+                font-size: 0.95rem;
+            }
+
+            .cta-box {
+                margin: 24px 16px 40px;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="topbar-brand">RADAR DE PERFIL · Laudo de exemplo</div>
+        <a href="/" class="topbar-back">← Voltar ao site</a>
+    </div>
+</div>
+
+<section class="intro">
+    <h1>Laudo de exemplo</h1>
+    <p>Este é um laudo real gerado pela rubrica do Radar de Perfil, com dados anonimizados. Serve para você ver o tipo de análise que recebe: 8 dimensões avaliadas, problemas críticos, melhorias prioritárias e sugestões de texto prontas para adaptar.</p>
+    <p class="intro-note">7 páginas. Rolagem livre. Imagem em alta resolução.</p>
+</section>
+
+<div class="gallery">
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-01.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-01.png" alt="Laudo de exemplo — página 1 de 7" loading="eager" draggable="false">
+        </picture>
+        <figcaption>Página 1 de 7</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-02.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-02.png" alt="Laudo de exemplo — página 2 de 7" loading="lazy" draggable="false">
+        </picture>
+        <figcaption>Página 2 de 7</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-03.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-03.png" alt="Laudo de exemplo — página 3 de 7" loading="lazy" draggable="false">
+        </picture>
+        <figcaption>Página 3 de 7</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-04.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-04.png" alt="Laudo de exemplo — página 4 de 7" loading="lazy" draggable="false">
+        </picture>
+        <figcaption>Página 4 de 7</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-05.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-05.png" alt="Laudo de exemplo — página 5 de 7" loading="lazy" draggable="false">
+        </picture>
+        <figcaption>Página 5 de 7</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-06.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-06.png" alt="Laudo de exemplo — página 6 de 7" loading="lazy" draggable="false">
+        </picture>
+        <figcaption>Página 6 de 7</figcaption>
+    </figure>
+    <figure>
+        <picture>
+            <source srcset="/assets/laudo-exemplo/pagina-07.webp" type="image/webp">
+            <img src="/assets/laudo-exemplo/pagina-07.png" alt="Laudo de exemplo — página 7 de 7" loading="lazy" draggable="false">
+        </picture>
+        <figcaption>Página 7 de 7</figcaption>
+    </figure>
+</div>
+
+<section class="cta-box">
+    <h2>Quer o seu?</h2>
+    <p>Laudo técnico em PDF, entrega por e-mail em até 3 dias úteis. Sem call, sem coaching.</p>
+    <a href="https://pay.kiwify.com.br/YGGuE57" class="cta-button">Quero meu laudo →</a>
+    <div class="cta-microcopy">R$297 · pagamento único · garantia de 7 dias</div>
+</section>
+
+<footer class="footer">
+    <div>
+        <a href="/">Página inicial</a> ·
+        <a href="/politica-privacidade.html">Política de privacidade</a> ·
+        <a href="/termos-uso.html">Termos de uso</a>
+    </div>
+    <div style="margin-top: 8px;">© 2026 Radar de Perfil</div>
+</footer>
+
+</body>
+</html>
