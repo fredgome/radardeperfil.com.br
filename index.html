@@ -1316,4 +1316,15 @@
     var links = document.querySelectorAll('a[href*="pay.kiwify.com.br"]');
     links.forEach(function(link) {
         try {
-            var 
+            var url = new URL(link.href);
+            Object.keys(captured).forEach(function(key) {
+                url.searchParams.set(key, captured[key]);
+            });
+            link.href = url.toString();
+        } catch(e) {}
+    });
+})();
+</script>
+
+</body>
+</html>
