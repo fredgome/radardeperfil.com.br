@@ -200,9 +200,15 @@
             }
         }
     </style>
-    <!-- Cloudflare Web Analytics (cookieless para visitantes; opt-out interno via cookie radar_no_track=1) -->
+    <!-- Cloudflare Web Analytics (cookieless para visitantes; opt-out admin via cookie radar_no_track=1 ou query ?notrack=1) -->
     <script>
     (function(){
+      if (location.search.indexOf('notrack=1') !== -1) {
+        document.cookie = 'radar_no_track=1; max-age=157680000; path=/; SameSite=Lax';
+        if (history.replaceState) {
+          history.replaceState(null, '', location.pathname);
+        }
+      }
       if (document.cookie.indexOf('radar_no_track=1') !== -1) return;
       var s = document.createElement('script');
       s.defer = true;
