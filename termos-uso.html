@@ -1,555 +1,468 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos de Uso - Radar de Perfil</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso · Radar de Perfil</title>
+<meta name="description" content="Termos de Uso do Radar de Perfil em conformidade com a legislação brasileira.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="canonical" href="https://radardeperfil.com.br/termos-uso.html">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rdp-ink:        #0f1715;
+    --rdp-ink-body:   #2d2d2d;
+    --rdp-teal:       #0a3d3a;
+    --rdp-paper:      #f7f5f0;
+    --rdp-rule:       #e8e6df;
+    --rdp-muted:      #6a6a6a;
+    --rdp-white:      #ffffff;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--rdp-white);
+    color: var(--rdp-ink-body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
-        header {
-            background-color: #1A4A4A;
-            color: white;
-            padding: 1.5rem 0;
-            border-bottom: 4px solid #2D7DD2;
-        }
+  h1, h2, h3 { font-family: 'Lora', Georgia, serif; color: var(--rdp-ink); letter-spacing: -0.01em; }
+  h1 { font-size: 32px; line-height: 1.2; font-weight: 600; margin: 0 0 12px 0; }
+  h2 { font-size: 22px; line-height: 1.3; font-weight: 600; margin: 40px 0 14px 0; }
+  h3 { font-size: 17px; line-height: 1.35; font-weight: 600; margin: 24px 0 10px 0; }
+  @media (min-width: 720px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 19px; }
+  }
+  p { margin-bottom: 14px; color: var(--rdp-ink-body); }
+  ul, ol { margin: 12px 0 18px 22px; }
+  li { margin-bottom: 6px; }
 
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+  a { color: var(--rdp-teal); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--rdp-ink); }
 
-        header a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--rdp-teal);
+    margin-bottom: 22px;
+  }
 
-        header a:hover {
-            color: #2D7DD2;
-        }
+  header.site-header {
+    border-bottom: 1px solid var(--rdp-rule);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: saturate(180%) blur(8px);
+    z-index: 10;
+  }
+  .header-row {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1040px; margin: 0 auto; padding: 0 24px;
+  }
+  .header-brand-group { display: flex; align-items: center; gap: 12px; }
+  .brand {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600; font-size: 19px;
+    color: var(--rdp-ink); text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .brand:hover { text-decoration: none; color: var(--rdp-ink); }
+  .brand-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--rdp-teal);
+    border: 1px solid rgba(10,61,58,0.35);
+    background: var(--rdp-white);
+    padding: 4px 8px; border-radius: 2px; line-height: 1;
+  }
+  .brand-chip::before {
+    content: ""; width: 4px; height: 4px;
+    border-radius: 50%; background: var(--rdp-teal);
+  }
+  @media (max-width: 480px) {
+    .brand-chip { display: none; }
+  }
+  .header-back {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--rdp-ink); text-decoration: none;
+  }
+  .header-back:hover { color: var(--rdp-teal); text-decoration: underline; }
 
-        .back-link {
-            color: #2D7DD2 !important;
-            font-weight: 500;
-            font-size: 0.95rem !important;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+  main.legal {
+    padding: 48px 0 80px 0;
+  }
+  .doc-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--rdp-muted);
+    margin-bottom: 32px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rdp-rule);
+  }
 
-        .back-link:hover {
-            color: #1A4A4A !important;
-            background-color: rgba(45, 125, 210, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            margin: -0.5rem -1rem;
-        }
+  .highlight {
+    background: var(--rdp-paper);
+    border-left: 3px solid var(--rdp-teal);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 2px;
+    font-size: 15px;
+  }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+  .contact-info {
+    background: var(--rdp-paper);
+    padding: 22px 24px;
+    margin: 22px 0;
+    border-radius: 2px;
+    border: 1px solid var(--rdp-rule);
+    font-size: 15px;
+  }
 
-        h1 {
-            color: #1A4A4A;
-            margin-bottom: 0.5rem;
-            font-size: 2.2rem;
-            font-weight: 700;
-        }
+  footer.site-footer {
+    padding: 34px 0;
+    font-size: 13px;
+    color: var(--rdp-muted);
+    border-top: 1px solid #ececec;
+  }
+  footer.site-footer a { color: var(--rdp-ink-body); text-decoration: none; margin-right: 22px; }
+  footer.site-footer a:hover { color: var(--rdp-teal); text-decoration: underline; }
+  .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
 
-        .document-info {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        h2 {
-            color: #1A4A4A;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        h3 {
-            color: #2D7DD2;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.6rem;
-        }
-
-        strong {
-            color: #1A4A4A;
-            font-weight: 600;
-        }
-
-        .highlight {
-            background-color: #f0f8ff;
-            border-left: 4px solid #2D7DD2;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 4px;
-        }
-
-        .highlight strong {
-            color: #1A4A4A;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        footer {
-            background-color: #f5f5f5;
-            padding: 2rem;
-            margin-top: 3rem;
-            border-top: 2px solid #e0e0e0;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-info {
-            background-color: #f0f8ff;
-            border-left: 4px solid #2D7DD2;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-
-        .contact-info strong {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #1A4A4A;
-        }
-
-        .contact-info a {
-            color: #2D7DD2;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem 1rem;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-            }
-
-            h3 {
-                font-size: 1rem;
-            }
-
-            header nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            ul, ol {
-                margin-left: 1.5rem;
-            }
-        }
-    </style>
-    <!-- Cloudflare Web Analytics (cookieless para visitantes; opt-out admin via cookie radar_no_track=1 ou query ?notrack=1) -->
-    <script>
-    (function(){
-      if (location.search.indexOf('notrack=1') !== -1) {
-        document.cookie = 'radar_no_track=1; max-age=157680000; path=/; SameSite=Lax';
-        if (history.replaceState) {
-          history.replaceState(null, '', location.pathname);
-        }
-      }
-      if (document.cookie.indexOf('radar_no_track=1') !== -1) return;
-      var s = document.createElement('script');
-      s.defer = true;
-      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
-      s.setAttribute('data-cf-beacon', '{"token": "b0ce06e6d5444211963edf6a0dc0fbaf"}');
-      document.head.appendChild(s);
-    })();
-    </script>
-    <!-- End Cloudflare Web Analytics -->
+  .footer-meta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--rdp-muted);
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="./index.html">Radar de Perfil</a>
-            <a href="./index.html" class="back-link">← Voltar ao site</a>
-        </nav>
-    </header>
 
-    <main class="container">
-        <h1>Termos de Uso</h1>
-        <div class="document-info">
-            <strong>Última atualização:</strong> 2 de abril de 2026<br>
-            <strong>Versão:</strong> 2.1
-        </div>
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-brand-group">
+      <a href="./index.html" class="brand">Radar de Perfil</a>
+      <span class="brand-chip">§ RDP</span>
+    </div>
+    <a href="./index.html" class="header-back">← Voltar ao site</a>
+  </div>
+</header>
 
-        <!-- Seção 1: Introdução -->
-        <div class="section">
-            <h2>1. Introdução e Aceitação dos Termos</h2>
-            <p>Bem-vindo ao <strong>Radar de Perfil</strong> (radardeperfil.com.br). Estes Termos de Uso regulam a relação entre você (doravante "Cliente") e <strong>Radar de Perfil</strong>, serviço brasileiro de auditoria profissional (doravante "Empresa", "nós", "nossa"), na prestação do serviço de auditoria técnica de CV e perfil profissional.</p>
-            <p>Ao acessar o site, preencher o formulário de contratação ou realizar qualquer pagamento para utilizar nossos serviços, você concorda integralmente com os presentes termos. Caso não concorde com alguma disposição, solicitamos que não prossiga com a contratação.</p>
-        </div>
+<main class="legal">
+  <div class="wrap">
+    <div class="eyebrow">Documento legal · Termos contratuais</div>
+    <h1>Termos de Uso</h1>
+    <div class="doc-meta">Última atualização: 2 de maio de 2026 · Versão 2.2</div>
 
-        <!-- Seção 2: Descrição do Serviço -->
-        <div class="section">
-            <h2>2. Descrição do Serviço</h2>
-            <p>O serviço <strong>Radar de Perfil</strong> consiste em uma auditoria técnica de Currículo Vitae (CV) e perfil profissional do Cliente, com objetivo de fornecer um relatório diagnóstico informativo sobre pontos fortes, oportunidades de melhoria e recomendações.</p>
+    <h2>1. Introdução e Aceitação dos Termos</h2>
+    <p>Bem-vindo ao <strong>Radar de Perfil</strong> (radardeperfil.com.br). Estes Termos de Uso regulam a relação entre você (doravante "Cliente") e <strong>Radar de Perfil</strong>, serviço brasileiro de auditoria profissional (doravante "Empresa", "nós", "nossa"), na prestação do serviço de auditoria técnica de CV e perfil profissional.</p>
+    <p>Ao acessar o site, preencher o formulário de contratação ou realizar qualquer pagamento para utilizar nossos serviços, você concorda integralmente com os presentes termos. Caso não concorde com alguma disposição, solicitamos que não prossiga com a contratação.</p>
 
-            <h3>2.1 Modalidade de Entrega</h3>
-            <p>O serviço é <strong>100% assíncrono</strong> (não há chamadas, reuniões ou atendimento em tempo real). O processo segue as seguintes etapas:</p>
-            <ol>
-                <li>Cliente efetua pagamento de <strong>R$ 297,00</strong> via plataforma Kiwify;</li>
-                <li>Cliente preenche formulário Tally com CV em PDF (ou LinkedIn em PDF legível), respostas obrigatórias e, quando aplicável, a descrição da vaga-alvo;</li>
-                <li>Relatório é processado e revisado internamente;</li>
-                <li>Relatório diagnóstico é entregue por e-mail em formato PDF em <strong>até 3 (três) dias úteis</strong> após o recebimento do material completo.</li>
-            </ol>
-            <div class="highlight">
-                <strong>Importante:</strong> O prazo de entrega NÃO começa a contar a partir do pagamento, mas sim a partir do recebimento do formulário completo (CV em PDF, mínimo de 2 respostas obrigatórias e descrição da vaga, quando houver vaga-alvo). Dias úteis são de segunda a sexta-feira, exceto feriados nacionais.
-            </div>
+    <h2>2. Descrição do Serviço</h2>
+    <p>O serviço <strong>Radar de Perfil</strong> consiste em uma auditoria técnica de Currículo Vitae (CV) e perfil profissional do Cliente, com objetivo de fornecer um relatório diagnóstico informativo sobre pontos fortes, oportunidades de melhoria e recomendações.</p>
 
-            <h3>2.2 Conteúdo do Relatório</h3>
-            <p>O relatório é um <strong>documento informativo</strong> que inclui:</p>
-            <ul>
-                <li>Análise técnica do CV e/ou perfil LinkedIn (estrutura, formatação, palavras-chave, clareza);</li>
-                <li>Scorecard por dimensões profissionais com justificativas;</li>
-                <li>Identificação dos principais problemas e oportunidades de melhoria;</li>
-                <li>Recomendações priorizadas e sugestões de texto para adaptar;</li>
-                <li>Checklist de ações práticas.</li>
-            </ul>
+    <h3>2.1 Modalidade de Entrega</h3>
+    <p>O serviço é <strong>100% assíncrono</strong> (não há chamadas, reuniões ou atendimento em tempo real). O processo segue as seguintes etapas:</p>
+    <ol>
+      <li>Cliente efetua pagamento de <strong>R$ 297,00</strong> via plataforma Kiwify;</li>
+      <li>Cliente preenche formulário Tally com CV em PDF (ou LinkedIn em PDF legível), respostas obrigatórias e, quando aplicável, a descrição da vaga-alvo;</li>
+      <li>Relatório é processado e revisado internamente;</li>
+      <li>Relatório diagnóstico é entregue por e-mail em formato PDF em <strong>até 3 (três) dias úteis</strong> após o recebimento do material completo.</li>
+    </ol>
+    <div class="highlight">
+      <strong>Importante:</strong> O prazo de entrega NÃO começa a contar a partir do pagamento, mas sim a partir do recebimento do formulário completo (CV em PDF, mínimo de 2 respostas obrigatórias e descrição da vaga, quando houver vaga-alvo). Dias úteis são de segunda a sexta-feira, exceto feriados nacionais.
+    </div>
 
-            <h3>2.3 Metodologia e Processamento</h3>
-            <p>O Radar de Perfil foi desenvolvido a partir de uma rubrica estruturada de avaliação com critérios práticos de recrutamento e posicionamento profissional. A inteligência artificial é utilizada como ferramenta de processamento e consistência dentro deste framework metodológico. O valor do serviço está no método, no julgamento e na priorização do diagnóstico. O cliente autoriza o processamento de seus dados (CV e informações profissionais) para este fim.</p>
-        </div>
+    <h3>2.2 Conteúdo do Relatório</h3>
+    <p>O relatório é um <strong>documento informativo</strong> que inclui:</p>
+    <ul>
+      <li>Análise técnica do CV e/ou perfil LinkedIn (estrutura, formatação, palavras-chave, clareza);</li>
+      <li>Scorecard por dimensões profissionais com justificativas;</li>
+      <li>Identificação dos principais problemas e oportunidades de melhoria;</li>
+      <li>Recomendações priorizadas e sugestões de texto para adaptar;</li>
+      <li>Checklist de ações práticas.</li>
+    </ul>
 
-        <!-- Seção 3: Limitações e Isenção de Responsabilidade -->
-        <div class="section">
-            <h2>3. Limitações e Isenção de Responsabilidade</h2>
-            <p><strong>O serviço é informativo e diagnóstico</strong>. O relatório NÃO garante, não promete e não é responsável por:</p>
-            <ul>
-                <li>Colocação em emprego ou acesso a entrevistas;</li>
-                <li>Aumento de salário ou mudança de posição profissional;</li>
-                <li>Contratação por empresas ou recrutadores;</li>
-                <li>Qualquer resultado econômico, profissional ou pessoal específico;</li>
-                <li>Aplicação prática das recomendações (responsabilidade do Cliente).</li>
-            </ul>
+    <h3>2.3 Metodologia e Processamento</h3>
+    <p>O Radar de Perfil foi desenvolvido a partir de uma rubrica estruturada de avaliação com critérios práticos de recrutamento e posicionamento profissional. Ferramentas tecnológicas são utilizadas como apoio ao processamento e à consistência dentro deste framework metodológico, com revisão prévia ao envio do laudo. O valor do serviço está no método, no julgamento e na priorização do diagnóstico. O cliente autoriza o processamento de seus dados (CV e informações profissionais) para este fim.</p>
 
-            <div class="highlight">
-                <strong>O Cliente é o único responsável</strong> por implementar ou não as recomendações fornecidas no relatório. Radar de Perfil fornece orientação técnica; cabe ao Cliente a execução e os resultados daí decorrentes.
-            </div>
+    <h2>3. Limitações e Isenção de Responsabilidade</h2>
+    <p><strong>O serviço é informativo e diagnóstico</strong>. O relatório NÃO garante, não promete e não é responsável por:</p>
+    <ul>
+      <li>Colocação em emprego ou acesso a entrevistas;</li>
+      <li>Aumento de salário ou mudança de posição profissional;</li>
+      <li>Contratação por empresas ou recrutadores;</li>
+      <li>Qualquer resultado econômico, profissional ou pessoal específico;</li>
+      <li>Aplicação prática das recomendações (responsabilidade do Cliente).</li>
+    </ul>
+    <div class="highlight">
+      <strong>O Cliente é o único responsável</strong> por implementar ou não as recomendações fornecidas no relatório. Radar de Perfil fornece orientação técnica; cabe ao Cliente a execução e os resultados daí decorrentes.
+    </div>
 
-            <h3>3.1 Limite de Responsabilidade</h3>
-            <p>Exceto quando proibido por lei, a responsabilidade total da Empresa, em relação a qualquer reclamação relacionada a este serviço, fica limitada ao valor pago pelo Cliente na contratação (R$ 297,00).</p>
+    <h3>3.1 Limite de Responsabilidade</h3>
+    <p>Exceto quando proibido por lei, a responsabilidade total da Empresa, em relação a qualquer reclamação relacionada a este serviço, fica limitada ao valor pago pelo Cliente na contratação (R$ 297,00).</p>
 
-            <h3>3.2 Força Maior</h3>
-            <p>A Empresa não se responsabiliza por atrasos ou impedimentos na entrega do serviço causados por circunstâncias de força maior (falhas de internet, indisponibilidade de sistemas, eventos políticos, naturais ou sanitários).</p>
-        </div>
+    <h3>3.2 Força Maior</h3>
+    <p>A Empresa não se responsabiliza por atrasos ou impedimentos na entrega do serviço causados por circunstâncias de força maior (falhas de internet, indisponibilidade de sistemas, eventos políticos, naturais ou sanitários).</p>
 
-        <!-- Seção 4: Direitos autorais e propriedade intelectual -->
-        <div class="section">
-            <h2>4. Direitos Autorais e Propriedade Intelectual</h2>
+    <h2>4. Direitos Autorais e Propriedade Intelectual</h2>
 
-            <h3>4.1 Propriedade do Relatório</h3>
-            <p>O relatório gerado é fornecido ao Cliente para <strong>uso pessoal, confidencial e não comercial</strong>. O Cliente tem direito de:
-            <ul>
-                <li>Ler e utilizar o conteúdo do relatório para seu próprio desenvolvimento profissional;</li>
-                <li>Armazenar uma cópia para referência pessoal;</li>
-                <li>Compartilhar com mentores, coaches ou profissionais de carreira de forma privada.</li>
-            </ul>
-            </p>
+    <h3>4.1 Propriedade do Relatório</h3>
+    <p>O relatório gerado é fornecido ao Cliente para <strong>uso pessoal, confidencial e não comercial</strong>. O Cliente tem direito de:</p>
+    <ul>
+      <li>Ler e utilizar o conteúdo do relatório para seu próprio desenvolvimento profissional;</li>
+      <li>Armazenar uma cópia para referência pessoal;</li>
+      <li>Compartilhar com mentores, coaches ou profissionais de carreira de forma privada.</li>
+    </ul>
 
-            <h3>4.2 Metodologia e Propriedade da Empresa</h3>
-            <p>A metodologia, estrutura, templates, formatos e processo utilizado para gerar o relatório são propriedade exclusiva da Empresa. Fica vedado ao Cliente:</p>
-            <ul>
-                <li>Reproduzir ou modificar o template/estrutura do relatório;</li>
-                <li>Utilizar a metodologia para fins comerciais;</li>
-                <li>Distribuir, vender ou reutilizar o conteúdo do relatório como se fosse seu próprio serviço;</li>
-                <li>Registrar como marca ou propriedade intelectual qualquer elemento do serviço.</li>
-            </ul>
+    <h3>4.2 Metodologia e Propriedade da Empresa</h3>
+    <p>A metodologia, estrutura, templates, formatos e processo utilizado para gerar o relatório são propriedade exclusiva da Empresa. Fica vedado ao Cliente:</p>
+    <ul>
+      <li>Reproduzir ou modificar o template/estrutura do relatório;</li>
+      <li>Utilizar a metodologia para fins comerciais;</li>
+      <li>Distribuir, vender ou reutilizar o conteúdo do relatório como se fosse seu próprio serviço;</li>
+      <li>Registrar como marca ou propriedade intelectual qualquer elemento do serviço.</li>
+    </ul>
 
-            <h3>4.3 Licença de Uso</h3>
-            <p>O Cliente recebe uma licença não exclusiva, intransferível e revogável de usar o relatório conforme descrito acima. A Empresa se reserva o direito de revogar essa licença se o Cliente violar os termos desta cláusula.</p>
-        </div>
+    <h3>4.3 Licença de Uso</h3>
+    <p>O Cliente recebe uma licença não exclusiva, intransferível e revogável de usar o relatório conforme descrito acima. A Empresa se reserva o direito de revogar essa licença se o Cliente violar os termos desta cláusula.</p>
 
-        <!-- Seção 5: Pagamento e Política de Reembolso -->
-        <div class="section">
-            <h2>5. Pagamento e Política de Reembolso</h2>
+    <h2>5. Pagamento e Política de Reembolso</h2>
 
-            <h3>5.1 Preço e Formas de Pagamento</h3>
-            <p>O serviço custa <strong>R$ 297,00</strong> (duzentos e noventa e sete reais). O pagamento é realizado exclusivamente via plataforma Kiwify no ato da contratação. Outros métodos de pagamento não são aceitos.</p>
+    <h3>5.1 Preço e Formas de Pagamento</h3>
+    <p>O serviço custa <strong>R$ 297,00</strong> (duzentos e noventa e sete reais). O pagamento é realizado exclusivamente via plataforma Kiwify no ato da contratação. Outros métodos de pagamento não são aceitos.</p>
 
-            <h3>5.2 Política de Reembolso</h3>
-            <p>Você tem direito a <strong>reembolso integral</strong> nos seguintes casos:</p>
-            <ul>
-                <li>Se solicitar o cancelamento <strong>antes do início da produção</strong> do laudo;</li>
-                <li>Se o laudo <strong>não for entregue</strong> dentro do prazo de 3 dias úteis após o recebimento do material completo;</li>
-                <li>Se o laudo apresentar <strong>erros factuais graves</strong> que comprometam sua utilidade.</li>
-            </ul>
+    <h3>5.2 Política de Reembolso</h3>
+    <p>Você tem direito a <strong>reembolso integral</strong> nos seguintes casos:</p>
+    <ul>
+      <li>Se solicitar o cancelamento <strong>antes do início da produção</strong> do laudo;</li>
+      <li>Se o laudo <strong>não for entregue</strong> dentro do prazo de 3 dias úteis após o recebimento do material completo;</li>
+      <li>Se o laudo apresentar <strong>erros factuais graves</strong> que comprometam sua utilidade.</li>
+    </ul>
+    <p><strong>Não cabe reembolso</strong> nos seguintes casos:</p>
+    <ul>
+      <li>Discordância subjetiva com as notas ou recomendações do laudo;</li>
+      <li>O laudo ter sido entregue conforme especificado, mas o resultado do processo seletivo não ter sido o esperado;</li>
+      <li>Materiais incompletos ou ilegíveis fornecidos pelo cliente.</li>
+    </ul>
 
-            <p><strong>Não cabe reembolso</strong> nos seguintes casos:</p>
-            <ul>
-                <li>Discordância subjetiva com as notas ou recomendações do laudo;</li>
-                <li>O laudo ter sido entregue conforme especificado, mas o resultado do processo seletivo não ter sido o esperado;</li>
-                <li>Materiais incompletos ou ilegíveis fornecidos pelo cliente.</li>
-            </ul>
+    <h3>5.3 Como Solicitar Reembolso</h3>
+    <p>Solicitações de reembolso devem ser enviadas para <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a> em até 7 dias corridos após a entrega do laudo, informando:</p>
+    <ol>
+      <li>Data do pagamento e e-mail utilizado na contratação;</li>
+      <li>Motivo da solicitação;</li>
+      <li>A Empresa processará o reembolso em até 10 dias úteis via Kiwify.</li>
+    </ol>
 
-            <h3>5.3 Como Solicitar Reembolso</h3>
-            <p>Solicitações de reembolso devem ser enviadas para <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a> em até 7 dias corridos após a entrega do laudo, informando:</p>
-            <ol>
-                <li>Data do pagamento e e-mail utilizado na contratação;</li>
-                <li>Motivo da solicitação;</li>
-                <li>A Empresa processará o reembolso em até 10 dias úteis via Kiwify.</li>
-            </ol>
+    <h3>5.4 Renúncia de Pagamentos Futuros</h3>
+    <p>Este serviço é <strong>único e pontual</strong>. Não há assinatura recorrente, contrato de renovação automática ou cobranças futuras. O Cliente paga uma única vez por relatório.</p>
 
-            <h3>5.4 Renúncia de Pagamentos Futuros</h3>
-            <p>Este serviço é <strong>único e pontual</strong>. Não há assinatura recorrente, contrato de renovação automática ou cobranças futuras. O Cliente paga uma única vez por relatório.</p>
-        </div>
+    <h2>6. Prazos e Procedimentos de Entrega</h2>
 
-        <!-- Seção 6: Prazos e Procedimentos -->
-        <div class="section">
-            <h2>6. Prazos e Procedimentos de Entrega</h2>
+    <h3>6.1 Prazo de Entrega</h3>
+    <p>O relatório será entregue em até <strong>3 (três) dias úteis</strong> a partir do recebimento do material completo (CV em PDF, mínimo de 2 respostas obrigatórias e descrição da vaga, quando aplicável). O prazo NÃO começa a contar a partir do pagamento. Entregas mais rápidas podem ocorrer conforme disponibilidade.</p>
 
-            <h3>6.1 Prazo de Entrega</h3>
-            <p>O relatório será entregue em até <strong>3 (três) dias úteis</strong> a partir do recebimento do material completo (CV em PDF, mínimo de 2 respostas obrigatórias e descrição da vaga, quando aplicável). O prazo NÃO começa a contar a partir do pagamento. Entregas mais rápidas podem ocorrer conforme disponibilidade.</p>
+    <h3>6.2 Método de Entrega</h3>
+    <p>O relatório é entregue por email em formato PDF para o endereço de email indicado no formulário de contratação. É responsabilidade do Cliente fornecer um email válido e verificar a caixa de entrada (incluindo spam/lixo eletrônico).</p>
 
-            <h3>6.2 Método de Entrega</h3>
-            <p>O relatório é entregue por email em formato PDF para o endereço de email indicado no formulário de contratação. É responsabilidade do Cliente fornecer um email válido e verificar a caixa de entrada (incluindo spam/lixo eletrônico).</p>
+    <h3>6.3 Requisitos para Processamento</h3>
+    <p>A análise do relatório depende do preenchimento completo e claro do formulário Tally. Informações incompletas, ilegíveis ou inconsistentes podem atrasar o processamento. Neste caso, a Empresa poderá solicitar informações adicionais do Cliente.</p>
 
-            <h3>6.3 Requisitos para Processamento</h3>
-            <p>A análise do relatório depende do preenchimento completo e claro do formulário Tally. Informações incompletas, ilegíveis ou inconsistentes podem atrasar o processamento. Neste caso, a Empresa poderá solicitar informações adicionais do Cliente.</p>
+    <h3>6.4 Alterações Após Entrega</h3>
+    <p>Após a entrega do relatório, <strong>não realizamos alterações, correções ou versões revisadas</strong>. Caso necessite uma nova análise, será necessário contratar um novo serviço.</p>
 
-            <h3>6.4 Alterações Após Entrega</h3>
-            <p>Após a entrega do relatório, <strong>não realizamos alterações, correções ou versões revisadas</strong>. Caso necessite uma nova análise, será necessário contratar um novo serviço.</p>
-        </div>
+    <h2>7. Privacidade e Proteção de Dados</h2>
 
-        <!-- Seção 7: Privacidade e Proteção de Dados -->
-        <div class="section">
-            <h2>7. Privacidade e Proteção de Dados</h2>
+    <h3>7.1 Tratamento de Dados Pessoais</h3>
+    <p>Os dados fornecidos pelo Cliente (nome, email, CV, histórico profissional) são tratados conforme a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018). A Empresa utiliza esses dados exclusivamente para:</p>
+    <ul>
+      <li>Gerar e entregar o relatório diagnóstico;</li>
+      <li>Comunicação relacionada ao serviço (confirmação, entrega, suporte);</li>
+      <li>Compliance legal e segurança.</li>
+    </ul>
 
-            <h3>7.1 Tratamento de Dados Pessoais</h3>
-            <p>Os dados fornecidos pelo Cliente (nome, email, CV, histórico profissional) são tratados conforme a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018). A Empresa utiliza esses dados exclusivamente para:</p>
-            <ul>
-                <li>Gerar e entregar o relatório diagnóstico;</li>
-                <li>Comunicação relacionada ao serviço (confirmação, entrega, suporte);</li>
-                <li>Compliance legal e segurança.</li>
-            </ul>
+    <h3>7.2 Compartilhamento com Terceiros</h3>
+    <p>Os dados do Cliente são compartilhados com operadores terceirizados estritamente necessários para a prestação do serviço. A lista completa de categorias de subprocessadores e suas respectivas finalidades está disponível na <a href="./politica-privacidade.html">Política de Privacidade</a>. Os dados não são utilizados para finalidades secundárias além da prestação do serviço contratado.</p>
 
-            <h3>7.2 Compartilhamento com Terceiros</h3>
-            <p>Os dados do Cliente são compartilhados com operadores terceirizados estritamente necessários para a prestação do serviço. A lista completa de categorias de subprocessadores e suas respectivas finalidades está disponível na <a href="politica-privacidade.html">Política de Privacidade</a>. Os dados não são utilizados para treinar modelos de inteligência artificial.</p>
+    <h3>7.3 Retenção de Dados</h3>
+    <p>Os dados profissionais do Cliente (CV, respostas, laudo) são retidos por no máximo <strong>30 dias após a entrega do laudo</strong>, para fins de eventual suporte. Após esse prazo, são deletados de todas as ferramentas sob controle operacional. Dados de transação financeira são retidos conforme exigido por lei.</p>
 
-            <h3>7.3 Retenção de Dados</h3>
-            <p>Os dados profissionais do Cliente (CV, respostas, laudo) são retidos por no máximo <strong>30 dias após a entrega do laudo</strong>, para fins de eventual suporte. Após esse prazo, são deletados de todas as ferramentas sob controle operacional. Dados de transação financeira são retidos conforme exigido por lei.</p>
+    <h3>7.4 Direitos do Titular de Dados</h3>
+    <p>O Cliente tem direito de:</p>
+    <ul>
+      <li>Acessar seus dados pessoais;</li>
+      <li>Solicitar correção de dados imprecisos;</li>
+      <li>Solicitar exclusão de dados (direito ao esquecimento);</li>
+      <li>Exportar seus dados em formato estruturado.</li>
+    </ul>
+    <p>Para exercer esses direitos, entre em contato conosco em contato@radardeperfil.com.br.</p>
 
-            <h3>7.4 Direitos do Titular de Dados</h3>
-            <p>O Cliente tem direito de:</p>
-            <ul>
-                <li>Acessar seus dados pessoais;</li>
-                <li>Solicitar correção de dados imprecisos;</li>
-                <li>Solicitar exclusão de dados (direito ao esquecimento);</li>
-                <li>Exportar seus dados em formato estruturado.</li>
-            </ul>
-            <p>Para exercer esses direitos, entre em contato conosco em contato@radardeperfil.com.br.</p>
+    <h3>7.5 Cookies e Rastreamento</h3>
+    <p>O site radardeperfil.com.br não utiliza cookies de rastreamento ou publicidade. Podemos utilizar cookies técnicos essenciais para funcionalidades básicas do site e formulário. O Cliente pode desabilitar cookies nas configurações do navegador.</p>
 
-            <h3>7.5 Cookies e Rastreamento</h3>
-            <p>O site radardeperfil.com.br não utiliza cookies de rastreamento ou publicidade. Podemos utilizar cookies técnicos essenciais para funcionalidades básicas do site e formulário. O Cliente pode desabilitar cookies nas configurações do navegador.</p>
-        </div>
+    <h2>8. Uso Aceitável e Proibições</h2>
+    <p>O Cliente concorda em não utilizar o serviço para:</p>
+    <ul>
+      <li>Atividades ilegais, fraudes ou enganosas;</li>
+      <li>Violar direitos de terceiros (propriedade intelectual, privacidade, reputação);</li>
+      <li>Fornecer informações falsas, enganosas ou prejudiciais;</li>
+      <li>Solicitar análise de CV/perfis que não lhe pertençam sem consentimento;</li>
+      <li>Reproduzir, modificar ou distribuir o relatório comercialmente;</li>
+      <li>Reverter engenharia, hackear ou contornar segurança do serviço.</li>
+    </ul>
+    <p>A violação destas proibições pode resultar no cancelamento imediato do serviço e referência às autoridades competentes, se necessário.</p>
 
-        <!-- Seção 8: Uso Aceitável e Proibições -->
-        <div class="section">
-            <h2>8. Uso Aceitável e Proibições</h2>
-            <p>O Cliente concorda em não utilizar o serviço para:</p>
-            <ul>
-                <li>Atividades ilegais, fraudes ou enganosas;</li>
-                <li>Violar direitos de terceiros (propriedade intelectual, privacidade, reputação);</li>
-                <li>Fornecer informações falsas, enganosas ou prejudiciais;</li>
-                <li>Solicitar análise de CV/perfis que não lhe pertençam sem consentimento;</li>
-                <li>Reproduzir, modificar ou distribuir o relatório comercialmente;</li>
-                <li>Reverter engenharia, hackear ou contornar segurança do serviço.</li>
-            </ul>
+    <h2>9. Isenção de Garantias</h2>
+    <p>O serviço é fornecido "<strong>conforme está</strong>" e "conforme disponível", <strong>sem garantias de qualquer espécie</strong> (expressa ou implícita), incluindo:</p>
+    <ul>
+      <li>Garantia de adequação a um fim específico;</li>
+      <li>Garantia de não infração de direitos;</li>
+      <li>Garantia de merchantability (comerciabilidade);</li>
+      <li>Garantia de continuidade ou disponibilidade ininterrupta;</li>
+      <li>Garantia de precisão absoluta do relatório;</li>
+      <li>Garantia de resultados profissionais ou financeiros.</li>
+    </ul>
+    <p>A Empresa não garante que o serviço atenderá às expectativas específicas de cada Cliente ou que as recomendações resultarão em oportunidades profissionais.</p>
 
-            <p>A violação destas proibições pode resultar no cancelamento imediato do serviço e referência às autoridades competentes, se necessário.</p>
-        </div>
+    <h2>10. Limitação de Responsabilidade</h2>
 
-        <!-- Seção 9: Isenção de Garantias -->
-        <div class="section">
-            <h2>9. Isenção de Garantias</h2>
-            <p>O serviço é fornecido "<strong>conforme está</strong>" e "conforme disponível", <strong>sem garantias de qualquer espécie</strong> (expressa ou implícita), incluindo:</p>
-            <ul>
-                <li>Garantia de adequação a um fim específico;</li>
-                <li>Garantia de não infração de direitos;</li>
-                <li>Garantia de merchantability (comerciabilidade);</li>
-                <li>Garantia de continuidade ou disponibilidade ininterrupta;</li>
-                <li>Garantia de precisão absoluta do relatório;</li>
-                <li>Garantia de resultados profissionais ou financeiros.</li>
-            </ul>
+    <h3>10.1 Exclusão de Danos Indiretos</h3>
+    <p>A Empresa não será responsável por danos indiretos, incidentais, especiais, consequentes ou punitivos, incluindo lucros cessantes, perda de dados, perda de reputação, custos de substituição ou qualquer outro dano que surja da contratação, uso ou impossibilidade de usar o serviço, mesmo que a Empresa tenha sido informada da possibilidade de tais danos.</p>
 
-            <p>A Empresa não garante que o serviço atenderá às expectativas específicas de cada Cliente ou que as recomendações resultarão em oportunidades profissionais.</p>
-        </div>
+    <h3>10.2 Limite Máximo de Responsabilidade</h3>
+    <p>A responsabilidade total da Empresa, em qualquer reclamação, fica limitada ao valor pago pelo Cliente na contratação (<strong>R$ 297,00</strong>).</p>
 
-        <!-- Seção 10: Limitação de Responsabilidade -->
-        <div class="section">
-            <h2>10. Limitação de Responsabilidade</h2>
+    <h3>10.3 Algumas Jurisdições Não Permitem Exclusões</h3>
+    <p>Algumas jurisdições podem não permitir a exclusão de certas garantias ou limitações de responsabilidade. Neste caso, as limitações se aplicarão até o máximo permitido pela lei local.</p>
 
-            <h3>10.1 Exclusão de Danos Indiretos</h3>
-            <p>A Empresa não será responsável por danos indiretos, incidentais, especiais, consequentes ou punitivos, incluindo lucros cessantes, perda de dados, perda de reputação, custos de substituição ou qualquer outro dano que surja da contratação, uso ou impossibilidade de usar o serviço, mesmo que a Empresa tenha sido informada da possibilidade de tais danos.</p>
+    <h2>11. Rescisão e Cancelamento</h2>
 
-            <h3>10.2 Limite Máximo de Responsabilidade</h3>
-            <p>A responsabilidade total da Empresa, em qualquer reclamação, fica limitada ao valor pago pelo Cliente na contratação (<strong>R$ 297,00</strong>).</p>
+    <h3>11.1 Cancelamento Anterior à Produção</h3>
+    <p>O Cliente pode solicitar <strong>cancelamento antes do início da produção do laudo</strong>, contactando a Empresa em <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a>. Neste caso, o Cliente fará jus a reembolso integral via Kiwify.</p>
 
-            <h3>10.3 Algumas Jurisdições Não Permitem Exclusões</h3>
-            <p>Algumas jurisdições podem não permitir a exclusão de certas garantias ou limitações de responsabilidade. Neste caso, as limitações se aplicarão até o máximo permitido pela lei local.</p>
-        </div>
+    <h3>11.2 Reembolso Após Entrega</h3>
+    <p>Após a entrega do relatório, o reembolso é regido pelas condições da cláusula 5.2.</p>
 
-        <!-- Seção 11: Rescisão e Cancelamento -->
-        <div class="section">
-            <h2>11. Rescisão e Cancelamento</h2>
+    <h3>11.3 Rescisão por Violação</h3>
+    <p>A Empresa se reserva o direito de rescindir o serviço ou bloquear futuras contratações do Cliente caso:</p>
+    <ul>
+      <li>Violar os Termos de Uso;</li>
+      <li>Fornecer informações falsas ou enganosas;</li>
+      <li>Utilizar o serviço de forma ilícita;</li>
+      <li>Prejudicar a reputação ou interesses da Empresa.</li>
+    </ul>
 
-            <h3>11.1 Cancelamento Anterior à Produção</h3>
-            <p>O Cliente pode solicitar <strong>cancelamento antes do início da produção do laudo</strong>, contactando a Empresa em <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a>. Neste caso, o Cliente fará jus a reembolso integral via Kiwify.</p>
+    <h3>11.4 Efeitos da Rescisão</h3>
+    <p>Após rescisão, o Cliente perde direito a acessar ou utilizar o serviço. A Empresa pode deletar dados do Cliente conforme política de privacidade, salvo obrigações legais de retenção.</p>
 
-            <h3>11.2 Reembolso Após Entrega</h3>
-            <p>Após a entrega do relatório, o reembolso é regido pelas condições da cláusula 5.2.</p>
+    <h2>12. Modificações dos Termos</h2>
+    <p>A Empresa se reserva o direito de modificar estes Termos de Uso a qualquer momento. Modificações significativas serão comunicadas via email ou avisos no site. O uso contínuo do serviço após notificação de modificações constitui aceitação dos novos termos.</p>
+    <p>Recomendamos que o Cliente revise periodicamente os Termos de Uso para se manter informado sobre atualizações.</p>
 
-            <h3>11.3 Rescisão por Violação</h3>
-            <p>A Empresa se reserva o direito de rescindir o serviço ou bloquear futuras contratações do Cliente caso:</p>
-            <ul>
-                <li>Violar os Termos de Uso;</li>
-                <li>Fornecer informações falsas ou enganosas;</li>
-                <li>Utilizar o serviço de forma ilícita;</li>
-                <li>Prejudicar a reputação ou interesses da Empresa.</li>
-            </ul>
+    <h2>13. Jurisdição e Lei Aplicável</h2>
 
-            <h3>11.4 Efeitos da Rescisão</h3>
-            <p>Após rescisão, o Cliente perde direito a acessar ou utilizar o serviço. A Empresa pode deletar dados do Cliente conforme política de privacidade, salvo obrigações legais de retenção.</p>
-        </div>
+    <h3>13.1 Lei Aplicável</h3>
+    <p>Estes Termos de Uso são regidos e interpretados de acordo com as leis da <strong>República Federativa do Brasil</strong>, particularmente:</p>
+    <ul>
+      <li>Código Civil Brasileiro (Lei 10.406/2002);</li>
+      <li>Código de Defesa do Consumidor (Lei 8.078/1990);</li>
+      <li>Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018);</li>
+      <li>Demais leis e regulamentações brasileiras aplicáveis.</li>
+    </ul>
 
-        <!-- Seção 12: Modificações dos Termos -->
-        <div class="section">
-            <h2>12. Modificações dos Termos</h2>
-            <p>A Empresa se reserva o direito de modificar estes Termos de Uso a qualquer momento. Modificações significativas serão comunicadas via email ou avisos no site. O uso contínuo do serviço após notificação de modificações constitui aceitação dos novos termos.</p>
+    <h3>13.2 Forum Competente</h3>
+    <p>As partes elegem como foro competente para resolução de qualquer disputa decorrente deste contrato o foro da comarca de domicílio da Empresa, localizado no Brasil, renunciando a qualquer outro, ainda que privilegiado.</p>
 
-            <p>Recomendamos que o Cliente revise periodicamente os Termos de Uso para se manter informado sobre atualizações.</p>
-        </div>
+    <h3>13.3 Tentativa de Resolução Amigável</h3>
+    <p>Antes de recorrer a ações judiciais, as partes se comprometem em tentar resolver disputas através de negociação direta. Qualquer reclamação deve ser comunicada a contato@radardeperfil.com.br com detalhes sobre o problema.</p>
 
-        <!-- Seção 13: Jurisdição e Lei Aplicável -->
-        <div class="section">
-            <h2>13. Jurisdição e Lei Aplicável</h2>
+    <h2>14. Disposições Gerais</h2>
 
-            <h3>13.1 Lei Aplicável</h3>
-            <p>Estes Termos de Uso são regidos e interpretados de acordo com as leis da <strong>República Federativa do Brasil</strong>, particularmente:</p>
-            <ul>
-                <li>Código Civil Brasileiro (Lei 10.406/2002);</li>
-                <li>Código de Defesa do Consumidor (Lei 8.078/1990);</li>
-                <li>Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018);</li>
-                <li>Demais leis e regulamentações brasileiras aplicáveis.</li>
-            </ul>
+    <h3>14.1 Integralidade do Acordo</h3>
+    <p>Estes Termos de Uso, juntamente com a política de privacidade e qualquer outro documento referenciado, constituem o acordo integral entre o Cliente e a Empresa, substituindo todas as negociações, representações e acordos anteriores.</p>
 
-            <h3>13.2 Forum Competente</h3>
-            <p>As partes elegem como foro competente para resolução de qualquer disputa decorrente deste contrato o foro da comarca de domicílio da Empresa, localizado no Brasil, renunciando a qualquer outro, ainda que privilegiado.</p>
+    <h3>14.2 Independência das Cláusulas</h3>
+    <p>Se qualquer cláusula destes Termos for considerada inválida ou inexequível, as demais cláusulas permanecerão em vigência. A Empresa fará esforços razoáveis para reformular a cláusula inválida de forma a refletir sua intenção original.</p>
 
-            <h3>13.3 Tentativa de Resolução Amigável</h3>
-            <p>Antes de recorrer a ações judiciais, as partes se comprometem em tentar resolver disputas através de negociação direta. Qualquer reclamação deve ser comunicada a contato@radardeperfil.com.br com detalhes sobre o problema.</p>
-        </div>
+    <h3>14.3 Renúncia</h3>
+    <p>A não aplicação de qualquer direito ou disposição destes Termos não constitui renúncia a tal direito. Qualquer renúncia deve ser feita por escrito e assinada pela Empresa.</p>
 
-        <!-- Seção 14: Disposições Gerais -->
-        <div class="section">
-            <h2>14. Disposições Gerais</h2>
+    <h3>14.4 Cessão</h3>
+    <p>O Cliente não pode ceder, delegar ou transferir seus direitos ou obrigações sob este contrato sem consentimento prévio por escrito da Empresa. Qualquer tentativa de cesão em violação desta cláusula é nula.</p>
 
-            <h3>14.1 Integralidade do Acordo</h3>
-            <p>Estes Termos de Uso, juntamente com a política de privacidade e qualquer outro documento referenciado, constituem o acordo integral entre o Cliente e a Empresa, substituindo todas as negociações, representações e acordos anteriores.</p>
+    <h3>14.5 Terceiros Beneficiários</h3>
+    <p>Estes Termos de Uso são celebrados entre o Cliente e a Empresa exclusivamente. Não há terceiros beneficiários a menos que explicitamente indicado por escrito.</p>
 
-            <h3>14.2 Independência das Cláusulas</h3>
-            <p>Se qualquer cláusula destes Termos for considerada inválida ou inexequível, as demais cláusulas permanecerão em vigência. A Empresa fará esforços razoáveis para reformular a cláusula inválida de forma a refletir sua intenção original.</p>
+    <h3>14.6 Contato</h3>
+    <p>Para dúvidas, reclamações ou exercício de direitos, entre em contato conosco:</p>
+    <div class="contact-info">
+      <strong>Radar de Perfil</strong><br>
+      Email: <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a><br>
+      Site: <a href="https://radardeperfil.com.br" target="_blank" rel="noopener">radardeperfil.com.br</a>
+    </div>
 
-            <h3>14.3 Renúncia</h3>
-            <p>A não aplicação de qualquer direito ou disposição destes Termos não constitui renúncia a tal direito. Qualquer renúncia deve ser feita por escrito e assinada pela Empresa.</p>
+    <h2>15. Aceitação dos Termos</h2>
+    <p>Ao prosseguir com o preenchimento do formulário Tally e/ou efetuar o pagamento de R$ 297,00 via Kiwify, o Cliente <strong>confirma que leu, compreendeu e aceita integralmente estes Termos de Uso</strong>.</p>
+    <div class="highlight">
+      <strong>Esta aceitação é eletrônica e vinculante.</strong> Não é necessário assinatura impressa, conforme Lei 14.063/2020 que reconhece a validade e eficácia de documentos eletrônicos.
+    </div>
+  </div>
+</main>
 
-            <h3>14.4 Cessão</h3>
-            <p>O Cliente não pode ceder, delegar ou transferir seus direitos ou obrigações sob este contrato sem consentimento prévio por escrito da Empresa. Qualquer tentativa de cesão em violação desta cláusula é nula.</p>
+<footer class="site-footer">
+  <div class="wrap-wide footer-row">
+    <div>
+      <strong>Radar de Perfil</strong> &copy; 2026<br>
+      <span class="footer-meta">Auditoria técnica de currículo e perfil no LinkedIn</span>
+    </div>
+    <div>
+      <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a>
+      <a href="./index.html">Início</a>
+      <a href="./politica-privacidade.html">Política de Privacidade</a>
+    </div>
+  </div>
+  <div class="wrap-wide footer-meta" style="margin-top: 18px; padding: 0 24px;">
+    Estes Termos de Uso foram elaborados em conformidade com a legislação brasileira, incluindo Código Civil, Código de Defesa do Consumidor e LGPD.
+  </div>
+</footer>
 
-            <h3>14.5 Terceiros Beneficiários</h3>
-            <p>Estes Termos de Uso são celebrados entre o Cliente e a Empresa exclusivamente. Não há terceiros beneficiários a menos que explicitamente indicado por escrito.</p>
+<!-- Cloudflare Web Analytics -->
+<script>
+(function(){
+  try {
+    var url = new URL(window.location.href);
+    if (url.searchParams.get('notrack') === '1') {
+      var d = new Date();
+      d.setTime(d.getTime() + (5 * 365 * 24 * 60 * 60 * 1000));
+      document.cookie = 'radar_no_track=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+      url.searchParams.delete('notrack');
+      var clean = url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash;
+      window.history.replaceState({}, document.title, clean);
+      return;
+    }
+  } catch(e) {}
+  if (document.cookie.indexOf('radar_no_track=1') !== -1) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "b0ce06e6d5444211963edf6a0dc0fbaf"}');
+  document.head.appendChild(s);
+})();
+</script>
 
-            <h3>14.6 Contato</h3>
-            <p>Para dúvidas, reclamações ou exercício de direitos, entre em contato conosco:</p>
-        </div>
-
-        <!-- Contato -->
-        <div class="contact-info">
-            <strong>Radar de Perfil</strong><br>
-            Email: <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a><br>
-            Site: <a href="https://radardeperfil.com.br">radardeperfil.com.br</a>
-        </div>
-
-        <!-- Seção 15: Aceição -->
-        <div class="section">
-            <h2>15. Aceitação dos Termos</h2>
-            <p>Ao prosseguir com o preenchimento do formulário Tally e/ou efetuar o pagamento de R$ 297,00 via Kiwify, o Cliente <strong>confirma que leu, compreendeu e aceita integralmente estes Termos de Uso</strong>.</p>
-
-            <div class="highlight">
-                <strong>Esta aceitação é eletrônica e vinculante.</strong> Não é necessário assinatura impressa, conforme Lei 14.063/2020 que reconhece a validade e eficácia de documentos eletrônicos.
-            </div>
-        </div>
-
-    </main>
-
-    <footer>
-        <p><strong>Radar de Perfil — Auditoria Técnica de CV e Perfil Profissional</strong></p>
-        <p>© 2026 Radar de Perfil. Todos os direitos reservados.</p>
-        <p>Contato: <a href="mailto:contato@radardeperfil.com.br" style="color: #2D7DD2; text-decoration: none; font-weight: 500;">contato@radardeperfil.com.br</a></p>
-        <p style="margin-top: 1.5rem; font-size: 0.85rem; color: #999;">
-            Estes Termos de Uso foram elaborados em conformidade com a legislação brasileira, incluindo Código Civil, Código de Defesa do Consumidor e LGPD.
-        </p>
-    </footer>
 </body>
 </html>

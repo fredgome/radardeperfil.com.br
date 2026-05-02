@@ -1,677 +1,432 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Política de Privacidade do Radar de Perfil - Auditoria de Perfil Profissional">
-    <title>Política de Privacidade | Radar de Perfil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade · Radar de Perfil</title>
+<meta name="description" content="Política de Privacidade do Radar de Perfil em conformidade com a LGPD.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="canonical" href="https://radardeperfil.com.br/politica-privacidade.html">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rdp-ink:        #0f1715;
+    --rdp-ink-body:   #2d2d2d;
+    --rdp-teal:       #0a3d3a;
+    --rdp-paper:      #f7f5f0;
+    --rdp-rule:       #e8e6df;
+    --rdp-muted:      #6a6a6a;
+    --rdp-white:      #ffffff;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--rdp-white);
+    color: var(--rdp-ink-body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+  h1, h2, h3 { font-family: 'Lora', Georgia, serif; color: var(--rdp-ink); letter-spacing: -0.01em; }
+  h1 { font-size: 32px; line-height: 1.2; font-weight: 600; margin: 0 0 12px 0; }
+  h2 { font-size: 22px; line-height: 1.3; font-weight: 600; margin: 40px 0 14px 0; }
+  h3 { font-size: 17px; line-height: 1.35; font-weight: 600; margin: 24px 0 10px 0; }
+  @media (min-width: 720px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 19px; }
+  }
+  p { margin-bottom: 14px; color: var(--rdp-ink-body); }
+  ul, ol { margin: 12px 0 18px 22px; }
+  li { margin-bottom: 6px; }
 
-        /* Header */
-        header {
-            background-color: #1A4A4A;
-            padding: 2rem 1rem;
-            text-align: center;
-            border-bottom: 3px solid #2D7DD2;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+  a { color: var(--rdp-teal); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--rdp-ink); }
 
-        header a {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
-            transition: opacity 0.2s;
-        }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--rdp-teal);
+    margin-bottom: 22px;
+  }
 
-        header a:hover {
-            opacity: 0.9;
-        }
+  /* Header sticky */
+  header.site-header {
+    border-bottom: 1px solid var(--rdp-rule);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: saturate(180%) blur(8px);
+    z-index: 10;
+  }
+  .header-row {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1040px; margin: 0 auto; padding: 0 24px;
+  }
+  .header-brand-group { display: flex; align-items: center; gap: 12px; }
+  .brand {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600; font-size: 19px;
+    color: var(--rdp-ink); text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .brand:hover { text-decoration: none; color: var(--rdp-ink); }
+  .brand-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500; font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--rdp-teal);
+    border: 1px solid rgba(10,61,58,0.35);
+    background: var(--rdp-white);
+    padding: 4px 8px; border-radius: 2px; line-height: 1;
+  }
+  .brand-chip::before {
+    content: ""; width: 4px; height: 4px;
+    border-radius: 50%; background: var(--rdp-teal);
+  }
+  @media (max-width: 480px) {
+    .brand-chip { display: none; }
+  }
+  .header-back {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--rdp-ink); text-decoration: none;
+  }
+  .header-back:hover { color: var(--rdp-teal); text-decoration: underline; }
 
-        .header-subtitle {
-            color: #B0D4D4;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
+  /* Doc body */
+  main.legal {
+    padding: 48px 0 80px 0;
+  }
+  .doc-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--rdp-muted);
+    margin-bottom: 32px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rdp-rule);
+  }
 
-        /* Navigation */
-        nav {
-            background-color: white;
-            padding: 1rem;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 16px 0 20px 0;
+    font-size: 14px;
+  }
+  table th, table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rdp-rule);
+    vertical-align: top;
+  }
+  table th {
+    background: var(--rdp-paper);
+    font-weight: 600;
+    color: var(--rdp-ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+  }
 
-        nav a {
-            color: #1A4A4A;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s, border-bottom 0.2s;
-            padding-bottom: 0.25rem;
-            border-bottom: 2px solid transparent;
-        }
+  .highlight {
+    background: var(--rdp-paper);
+    border-left: 3px solid var(--rdp-teal);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 2px;
+    font-size: 15px;
+  }
+  .highlight ul { margin-bottom: 0; }
 
-        nav a:hover {
-            color: #2D7DD2;
-            border-bottom-color: #2D7DD2;
-        }
+  .contact-box {
+    background: var(--rdp-paper);
+    padding: 22px 24px;
+    margin: 18px 0;
+    border-radius: 2px;
+    border: 1px solid var(--rdp-rule);
+  }
+  .contact-box h3 { margin-top: 0; }
+  .contact-box p { margin-bottom: 6px; }
 
-        /* Main Content */
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem 3rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
+  .doc-end {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rdp-rule);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase;
+    color: var(--rdp-muted);
+    text-align: center;
+  }
 
-        .content-wrapper {
-            padding: 3rem 2rem;
-        }
-
-        /* Typography */
-        h1 {
-            color: #1A4A4A;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .update-date {
-            color: #999;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        h2 {
-            color: #1A4A4A;
-            font-size: 1.4rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #2D7DD2;
-        }
-
-        h3 {
-            color: #2D7DD2;
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        ul, ol {
-            margin: 1rem 0 1rem 2rem;
-            color: #444;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
-        }
-
-        strong {
-            color: #1A4A4A;
-            font-weight: 600;
-        }
-
-        em {
-            color: #2D7DD2;
-            font-style: italic;
-        }
-
-        .highlight {
-            background-color: #f0f7f8;
-            padding: 1.5rem;
-            border-left: 4px solid #2D7DD2;
-            margin: 1.5rem 0;
-            border-radius: 4px;
-        }
-
-        .highlight strong {
-            display: block;
-            color: #1A4A4A;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Contact Box */
-        .contact-box {
-            background-color: #f0f7f8;
-            border: 1px solid #2D7DD2;
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .contact-box h3 {
-            color: #1A4A4A;
-            border: none;
-            padding: 0;
-            margin: 0 0 1rem 0;
-        }
-
-        .contact-box p {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-box a {
-            color: #2D7DD2;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .contact-box a:hover {
-            color: #1A4A4A;
-            text-decoration: underline;
-        }
-
-        /* Table Styles */
-        table {
-            width: 100%;
-            margin: 1.5rem 0;
-            border-collapse: collapse;
-        }
-
-        th {
-            background-color: #1A4A4A;
-            color: white;
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        td {
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1A4A4A;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            border-top: 3px solid #2D7DD2;
-        }
-
-        footer p {
-            color: #B0D4D4;
-            margin-bottom: 0.5rem;
-        }
-
-        footer a {
-            color: #B0D4D4;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .content-wrapper {
-                padding: 2rem 1.5rem;
-            }
-
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-            }
-
-            nav {
-                gap: 1rem;
-            }
-
-            nav a {
-                font-size: 0.85rem;
-            }
-
-            main {
-                margin: 1rem auto;
-            }
-
-            header {
-                padding: 1.5rem 1rem;
-            }
-
-            header a {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Link Styles */
-        a {
-            color: #2D7DD2;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #1A4A4A;
-            text-decoration: underline;
-        }
-
-        .back-to-home {
-            display: inline-block;
-            margin-bottom: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #2D7DD2;
-            color: white;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.2s;
-        }
-
-        .back-to-home:hover {
-            background-color: #1A4A4A;
-            text-decoration: none;
-        }
-    </style>
-    <!-- Cloudflare Web Analytics (cookieless para visitantes; opt-out admin via cookie radar_no_track=1 ou query ?notrack=1) -->
-    <script>
-    (function(){
-      if (location.search.indexOf('notrack=1') !== -1) {
-        document.cookie = 'radar_no_track=1; max-age=157680000; path=/; SameSite=Lax';
-        if (history.replaceState) {
-          history.replaceState(null, '', location.pathname);
-        }
-      }
-      if (document.cookie.indexOf('radar_no_track=1') !== -1) return;
-      var s = document.createElement('script');
-      s.defer = true;
-      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
-      s.setAttribute('data-cf-beacon', '{"token": "b0ce06e6d5444211963edf6a0dc0fbaf"}');
-      document.head.appendChild(s);
-    })();
-    </script>
-    <!-- End Cloudflare Web Analytics -->
+  footer.site-footer {
+    padding: 34px 0;
+    font-size: 13px;
+    color: var(--rdp-muted);
+    border-top: 1px solid #ececec;
+  }
+  footer.site-footer a { color: var(--rdp-ink-body); text-decoration: none; margin-right: 22px; }
+  footer.site-footer a:hover { color: var(--rdp-teal); text-decoration: underline; }
+  .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <a href="./index.html">Radar de Perfil</a>
-        <div class="header-subtitle">Auditoria de Perfil Profissional</div>
-    </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="./index.html">Início</a>
-        <a href="./index.html">← Voltar ao site</a>
-    </nav>
+<header class="site-header">
+  <div class="header-row">
+    <div class="header-brand-group">
+      <a href="./index.html" class="brand">Radar de Perfil</a>
+      <span class="brand-chip">§ RDP</span>
+    </div>
+    <a href="./index.html" class="header-back">← Voltar ao site</a>
+  </div>
+</header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="content-wrapper">
-            <a href="./index.html" class="back-to-home">← Voltar para o início</a>
+<main class="legal">
+  <div class="wrap">
+    <div class="eyebrow">Documento legal · LGPD</div>
+    <h1>Política de Privacidade</h1>
+    <div class="doc-meta">Última atualização: 2 de maio de 2026 · Versão 3.2</div>
 
-            <h1>Política de Privacidade</h1>
-            <div class="update-date">Última atualização: 2 de abril de 2026 · Versão 3.1</div>
+    <h2>1. Introdução</h2>
+    <p>A <strong>Radar de Perfil</strong> ("nós", "nosso", "nossa" ou a "Empresa") opera o site <strong>radardeperfil.com.br</strong> e oferece o serviço de auditoria de perfil profissional. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos seus dados pessoais em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD)</strong> e outras legislações aplicáveis no Brasil.</p>
+    <p>Leia esta Política de Privacidade com cuidado. Se você não concordar com nossas práticas, por favor, não utilize nossos serviços.</p>
 
-            <h2>1. Introdução</h2>
-            <p>
-                A <strong>Radar de Perfil</strong> ("nós", "nosso", "nossa" ou a "Empresa") opera o site <strong>radardeperfil.com.br</strong>
-                e oferece o serviço de auditoria de perfil profissional. Esta Política de Privacidade explica como coletamos, usamos,
-                divulgamos e protegemos seus dados pessoais em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD)</strong>
-                e outras legislações aplicáveis no Brasil.
-            </p>
-            <p>
-                Leia esta Política de Privacidade com cuidado. Se você não concordar com nossas práticas, por favor, não utilize
-                nossos serviços.
-            </p>
+    <h2>2. Quem Somos</h2>
+    <ul>
+      <li><strong>Responsável:</strong> Radar de Perfil</li>
+      <li><strong>Localização:</strong> Brasil</li>
+      <li><strong>Email de Contato:</strong> <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></li>
+    </ul>
 
-            <h2>2. Quem Somos</h2>
-            <ul>
-                <li><strong>Responsável:</strong> Radar de Perfil</li>
-                <li><strong>Localização:</strong> Brasil</li>
-                <li><strong>Email de Contato:</strong> <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></li>
-            </ul>
+    <h2>3. Dados Pessoais Coletados</h2>
+    <p>Coletamos os seguintes dados pessoais por meio de nosso formulário de inscrição:</p>
+    <table>
+      <tr><th>Dado Pessoal</th><th>Tipo</th><th>Finalidade</th></tr>
+      <tr><td><strong>Nome Completo</strong></td><td>Obrigatório</td><td>Identificação do cliente e personalização do relatório</td></tr>
+      <tr><td><strong>Email</strong></td><td>Obrigatório</td><td>Comunicação e entrega do relatório em PDF</td></tr>
+      <tr><td><strong>Telefone</strong></td><td>Opcional</td><td>Contato adicional se necessário</td></tr>
+      <tr><td><strong>Arquivo de CV (PDF)</strong></td><td>Obrigatório</td><td>Análise e geração do relatório de auditoria</td></tr>
+      <tr><td><strong>Vaga-alvo / descrição de cargo</strong></td><td>Opcional</td><td>Personalização da auditoria quando há vaga específica</td></tr>
+    </table>
 
-            <h2>3. Dados Pessoais Coletados</h2>
-            <p>Coletamos os seguintes dados pessoais por meio de nosso formulário de inscrição:</p>
+    <h2>4. Base Legal para Tratamento de Dados</h2>
+    <p>Conforme a LGPD, a base legal principal para o tratamento de seus dados pessoais é:</p>
+    <ul>
+      <li><strong>Execução de Contrato (Art. 7º, V da LGPD):</strong> O tratamento é necessário para a prestação do serviço de auditoria que você contratou;</li>
+      <li><strong>Obrigações Legais:</strong> Cumprimento de obrigações tributárias e fiscais brasileiras, quando aplicável.</li>
+    </ul>
 
-            <table>
-                <tr>
-                    <th>Dado Pessoal</th>
-                    <th>Tipo</th>
-                    <th>Finalidade</th>
-                </tr>
-                <tr>
-                    <td><strong>Nome Completo</strong></td>
-                    <td>Obrigatório</td>
-                    <td>Identificação do cliente e personalização do relatório</td>
-                </tr>
-                <tr>
-                    <td><strong>Email</strong></td>
-                    <td>Obrigatório</td>
-                    <td>Comunicação e entrega do relatório em PDF</td>
-                </tr>
-                <tr>
-                    <td><strong>Telefone</strong></td>
-                    <td>Opcional</td>
-                    <td>Contato adicional se necessário</td>
-                </tr>
-                <tr>
-                    <td><strong>Arquivo de CV (PDF)</strong></td>
-                    <td>Obrigatório</td>
-                    <td>Análise e geração do relatório de auditoria</td>
-                </tr>
-                <tr>
-                    <td><strong>Vaga-alvo / descrição de cargo</strong></td>
-                    <td>Opcional</td>
-                    <td>Personalização da auditoria quando há vaga específica</td>
-                </tr>
-            </table>
+    <h2>5. Como Utilizamos Seus Dados</h2>
+    <p>Seus dados pessoais são utilizados exclusivamente para:</p>
+    <ul>
+      <li>Processar sua solicitação de auditoria de perfil profissional;</li>
+      <li>Gerar e entregar o relatório em PDF personalizado por email;</li>
+      <li>Comunicar-se com você sobre seu pedido ou serviço;</li>
+      <li>Cumprir obrigações legais e tributárias;</li>
+      <li>Responder a eventuais dúvidas de suporte.</li>
+    </ul>
 
-            <h2>4. Base Legal para Tratamento de Dados</h2>
-            <p>Conforme a LGPD, a base legal principal para o tratamento de seus dados pessoais é:</p>
-            <ul>
-                <li><strong>Execução de Contrato (Art. 7º, V da LGPD):</strong> O tratamento é necessário para a prestação do serviço de auditoria que você contratou;</li>
-                <li><strong>Obrigações Legais:</strong> Cumprimento de obrigações tributárias e fiscais brasileiras, quando aplicável.</li>
-            </ul>
+    <h2>6. Compartilhamento de Dados com Terceiros</h2>
+    <p>Seus dados pessoais são compartilhados com terceiros <strong>apenas na medida necessária</strong> para fornecer o serviço. Os parceiros que recebem seus dados são:</p>
 
-            <h2>5. Como Utilizamos Seus Dados</h2>
-            <p>Seus dados pessoais são utilizados exclusivamente para:</p>
-            <ul>
-                <li>Processar sua solicitação de auditoria de perfil profissional;</li>
-                <li>Gerar e entregar o relatório em PDF personalizado por email;</li>
-                <li>Comunicar-se com você sobre seu pedido ou serviço;</li>
-                <li>Cumprir obrigações legais e tributárias;</li>
-                <li>Responder a eventuais dúvidas de suporte.</li>
-            </ul>
+    <h3>6.1 Plataforma de Pagamento (Brasil)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Processamento do pagamento;</li>
+      <li><strong>Dados Compartilhados:</strong> Dados de pagamento (cartão, dados bancários, etc.);</li>
+      <li><strong>Nota:</strong> <strong>Radar de Perfil NÃO armazena</strong> dados de pagamento. Todos os dados financeiros são processados e armazenados exclusivamente pela plataforma de pagamento.</li>
+    </ul>
 
-            <h2>6. Compartilhamento de Dados com Terceiros</h2>
-            <p>
-                Seus dados pessoais são compartilhados com terceiros <strong>apenas na medida necessária</strong>
-                para fornecer o serviço. Os parceiros que recebem seus dados são:
-            </p>
+    <h3>6.2 Provedor de Formulários (UE)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Coleta das informações e upload do CV via formulário;</li>
+      <li><strong>Dados Compartilhados:</strong> Nome, e-mail, CV em PDF, respostas ao questionário.</li>
+    </ul>
 
-            <h3>6.1 Plataforma de Pagamento (Brasil)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Processamento do pagamento;</li>
-                <li><strong>Dados Compartilhados:</strong> Dados de pagamento (cartão, dados bancários, etc.);</li>
-                <li><strong>Nota:</strong> <strong>Radar de Perfil NÃO armazena</strong> dados de pagamento. Todos os dados financeiros são processados e armazenados exclusivamente pela plataforma de pagamento.</li>
-            </ul>
+    <h3>6.3 Plataforma de Orquestração (UE/EUA)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Orquestração automatizada do fluxo de trabalho;</li>
+      <li><strong>Dados Compartilhados:</strong> Dados transientes (e-mail, ID de transação, dados do formulário).</li>
+    </ul>
 
-            <h3>6.2 Provedor de Formulários (UE)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Coleta das informações e upload do CV via formulário;</li>
-                <li><strong>Dados Compartilhados:</strong> Nome, e-mail, CV em PDF, respostas ao questionário.</li>
-            </ul>
+    <h3>6.4 Provedor de Armazenamento Operacional (EUA)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Registro interno de pedidos para controle operacional;</li>
+      <li><strong>Dados Compartilhados:</strong> Nome, e-mail, ID do pedido, data e status.</li>
+    </ul>
 
-            <h3>6.3 Plataforma de Orquestração (UE/EUA)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Orquestração automatizada do fluxo de trabalho;</li>
-                <li><strong>Dados Compartilhados:</strong> Dados transientes (e-mail, ID de transação, dados do formulário).</li>
-            </ul>
+    <h3>6.5 Ferramentas de Apoio ao Processamento Técnico (EUA)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Suporte computacional ao processo técnico de elaboração do diagnóstico;</li>
+      <li><strong>Dados Compartilhados:</strong> Conteúdo do CV, respostas ao questionário e descrição de cargo (se fornecida);</li>
+      <li><strong>Nota:</strong> Os dados são processados exclusivamente para fins do serviço contratado e não são utilizados para finalidades secundárias pelo provedor.</li>
+    </ul>
 
-            <h3>6.4 Provedor de Armazenamento Operacional (EUA)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Registro interno de pedidos para controle operacional;</li>
-                <li><strong>Dados Compartilhados:</strong> Nome, e-mail, ID do pedido, data e status.</li>
-            </ul>
+    <h3>6.6 Provedor de Geração de Documentos (EUA)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Geração do documento PDF do laudo;</li>
+      <li><strong>Dados Compartilhados:</strong> Conteúdo final do laudo (processamento transiente, sem dados brutos do CV).</li>
+    </ul>
 
-            <h3>6.5 Provedor de Inteligência Artificial (EUA)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Análise de inteligência artificial do perfil profissional;</li>
-                <li><strong>Dados Compartilhados:</strong> Conteúdo do CV, respostas ao questionário e descrição de cargo (se fornecida);</li>
-                <li><strong>Nota:</strong> Seus dados não são utilizados para treinar modelos de inteligência artificial.</li>
-            </ul>
+    <h3>6.7 Provedor de E-mail Transacional (EUA)</h3>
+    <ul>
+      <li><strong>Finalidade:</strong> Envio do e-mail com o laudo em anexo;</li>
+      <li><strong>Dados Compartilhados:</strong> Seu e-mail e arquivo PDF do relatório.</li>
+    </ul>
 
-            <h3>6.6 Provedor de Geração de Documentos (EUA)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Geração do documento PDF do laudo;</li>
-                <li><strong>Dados Compartilhados:</strong> Conteúdo final do laudo (processamento transiente, sem dados brutos do CV).</li>
-            </ul>
+    <div class="highlight">
+      <strong>O que NÃO fazemos:</strong>
+      <ul style="margin-top: 8px;">
+        <li>Não vendemos, alugamos ou compartilhamos seus dados para fins de marketing;</li>
+        <li>Não utilizamos seus dados para finalidades secundárias além da prestação do serviço contratado;</li>
+        <li>Não fazemos scraping do seu perfil LinkedIn;</li>
+        <li>Não prometemos emprego, entrevista ou aprovação em processos seletivos.</li>
+      </ul>
+    </div>
 
-            <h3>6.7 Provedor de E-mail Transacional (EUA)</h3>
-            <ul>
-                <li><strong>Finalidade:</strong> Envio do e-mail com o laudo em anexo;</li>
-                <li><strong>Dados Compartilhados:</strong> Seu e-mail e arquivo PDF do relatório.</li>
-            </ul>
+    <h2>7. Retenção de Dados</h2>
+    <p>Seus dados são retidos conforme o seguinte cronograma:</p>
+    <table>
+      <tr><th>Tipo de Dado</th><th>Período de Retenção</th><th>Justificativa</th></tr>
+      <tr><td><strong>CV, respostas e laudo</strong></td><td>30 dias após entrega do laudo</td><td>Eventual suporte pós-entrega</td></tr>
+      <tr><td><strong>E-mail e nome</strong></td><td>30 dias após entrega do laudo</td><td>Comunicação de suporte</td></tr>
+      <tr><td><strong>Registros financeiros/fiscais</strong></td><td>Conforme exigido por lei (até 5 anos)</td><td>Obrigação legal de retenção fiscal (plataforma de pagamento)</td></tr>
+    </table>
+    <p>Após o prazo de 30 dias, os dados profissionais são <strong>deletados de todas as ferramentas sob controle operacional</strong> (formulários, orquestração, armazenamento interno). O provedor de geração de documentos processa os dados de forma transitória. Dados de transação financeira são retidos pela plataforma de pagamento pelo prazo exigido por lei.</p>
 
-            <div class="highlight">
-                <strong>O que NÃO fazemos:</strong>
-                <ul style="margin-top: 0.5rem;">
-                    <li>Não vendemos, alugamos ou compartilhamos seus dados para fins de marketing;</li>
-                    <li>Não utilizamos seus dados para treinar modelos de inteligência artificial;</li>
-                    <li>Não fazemos scraping do seu perfil LinkedIn;</li>
-                    <li>Não prometemos emprego, entrevista ou aprovação em processos seletivos.</li>
-                </ul>
-            </div>
+    <h2>8. Seus Direitos Conforme a LGPD</h2>
+    <p>Sob a LGPD, você possui os seguintes direitos em relação aos seus dados pessoais:</p>
+    <ul>
+      <li><strong>Acesso:</strong> Direito de acessar todos os dados pessoais que temos sobre você;</li>
+      <li><strong>Correção:</strong> Direito de corrigir dados imprecisos ou incompletos;</li>
+      <li><strong>Exclusão:</strong> Direito de solicitar a exclusão de seus dados ("direito ao esquecimento");</li>
+      <li><strong>Portabilidade:</strong> Direito de receber seus dados em formato estruturado e portável;</li>
+      <li><strong>Oposição:</strong> Direito de se opor ao tratamento de seus dados para certos fins;</li>
+      <li><strong>Revogação de Consentimento:</strong> Direito de revogar seu consentimento a qualquer momento;</li>
+      <li><strong>Informação Sobre Compartilhamento:</strong> Direito de saber com quem seus dados são compartilhados.</li>
+    </ul>
+    <p>Para exercer qualquer um desses direitos, entre em contato conosco através do email: <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></p>
 
-            <h2>7. Retenção de Dados</h2>
-            <p>Seus dados são retidos conforme o seguinte cronograma:</p>
+    <h2>9. Segurança de Dados</h2>
+    <p>Implementamos medidas técnicas e organizacionais apropriadas para proteger seus dados pessoais contra:</p>
+    <ul>
+      <li>Acesso não autorizado;</li>
+      <li>Alteração, perda ou destruição acidental;</li>
+      <li>Processamento ilícito ou não autorizado.</li>
+    </ul>
+    <p>Estas medidas incluem:</p>
+    <ul>
+      <li>Criptografia de dados em trânsito (HTTPS);</li>
+      <li>Armazenamento seguro de dados;</li>
+      <li>Acesso restrito ao pessoal autorizado;</li>
+      <li>Auditorias regulares de segurança;</li>
+      <li>Políticas de confidencialidade para parceiros.</li>
+    </ul>
+    <p><strong>Nota:</strong> Embora utilizemos práticas padrão de segurança, nenhum método de transmissão pela internet ou armazenamento eletrônico é 100% seguro. Não podemos garantir segurança absoluta, mas nos comprometemos com a proteção máxima.</p>
 
-            <table>
-                <tr>
-                    <th>Tipo de Dado</th>
-                    <th>Período de Retenção</th>
-                    <th>Justificativa</th>
-                </tr>
-                <tr>
-                    <td><strong>CV, respostas e laudo</strong></td>
-                    <td>30 dias após entrega do laudo</td>
-                    <td>Eventual suporte pós-entrega</td>
-                </tr>
-                <tr>
-                    <td><strong>E-mail e nome</strong></td>
-                    <td>30 dias após entrega do laudo</td>
-                    <td>Comunicação de suporte</td>
-                </tr>
-                <tr>
-                    <td><strong>Registros financeiros/fiscais</strong></td>
-                    <td>Conforme exigido por lei (até 5 anos)</td>
-                    <td>Obrigação legal de retenção fiscal (Kiwify)</td>
-                </tr>
-            </table>
+    <h2>10. Cookies e Tecnologias de Rastreamento</h2>
+    <p><strong>Radar de Perfil NÃO utiliza cookies para rastreamento ou fins de publicidade.</strong></p>
+    <p>Podemos utilizar cookies técnicos essenciais apenas para:</p>
+    <ul>
+      <li>Manter sua sessão ativa no formulário;</li>
+      <li>Registrar preferências de privacidade expressas pelo próprio visitante (como a opção de não participar da análise de visitas).</li>
+    </ul>
+    <p>Utilizamos uma ferramenta de análise agregada e sem cookies de rastreamento para medir visitas e o funcionamento básico do site. Essa medição não identifica visitantes individualmente e não é usada para publicidade comportamental, remarketing ou criação de perfis de usuário.</p>
+    <p>Você pode optar por não participar dessa análise a qualquer momento, utilizando o parâmetro <code>?notrack=1</code> na URL do site.</p>
+    <p><strong>Não usamos:</strong></p>
+    <ul>
+      <li>Ferramentas de rastreamento com cookies de terceiros;</li>
+      <li>Cookies de publicidade ou marketing;</li>
+      <li>Tecnologias de identificação individual do dispositivo.</li>
+    </ul>
 
-            <p>
-                Após o prazo de 30 dias, os dados profissionais são <strong>deletados de todas as ferramentas sob controle operacional</strong>
-                (formulários, orquestração, armazenamento interno). O provedor de geração de documentos processa os dados de forma transitória.
-                Dados de transação financeira são retidos pela plataforma de pagamento pelo prazo exigido por lei.
-            </p>
+    <h2>11. Proteção de Menores de Idade</h2>
+    <p>Nosso serviço não é direcionado a menores de 18 anos. Não coletamos intencionalmente dados de menores de idade. Se descobrirmos que coletamos dados de menores sem consentimento parental apropriado, excluiremos imediatamente esses dados.</p>
 
-            <h2>8. Seus Direitos Conforme a LGPD</h2>
-            <p>
-                Sob a LGPD, você possui os seguintes direitos em relação aos seus dados pessoais:
-            </p>
-            <ul>
-                <li><strong>Acesso:</strong> Direito de acessar todos os dados pessoais que temos sobre você;</li>
-                <li><strong>Correção:</strong> Direito de corrigir dados imprecisos ou incompletos;</li>
-                <li><strong>Exclusão:</strong> Direito de solicitar a exclusão de seus dados ("direito ao esquecimento");</li>
-                <li><strong>Portabilidade:</strong> Direito de receber seus dados em formato estruturado e portável;</li>
-                <li><strong>Oposição:</strong> Direito de se opor ao tratamento de seus dados para certos fins;</li>
-                <li><strong>Revogação de Consentimento:</strong> Direito de revogar seu consentimento a qualquer momento;</li>
-                <li><strong>Informação Sobre Compartilhamento:</strong> Direito de saber com quem seus dados são compartilhados.</li>
-            </ul>
+    <h2>12. Alterações nesta Política</h2>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas, tecnologia ou legislação. Quando fizermos alterações significativas, notificaremos você por email ou através de avisos destacados no site.</p>
+    <p>Sua continuação de uso do serviço após notificação de alterações constitui aceitação das mudanças.</p>
 
-            <p>
-                Para exercer qualquer um desses direitos, entre em contato conosco através do email:
-                <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a>
-            </p>
+    <h2>13. Transferências Internacionais de Dados</h2>
+    <p>Alguns dos nossos operadores estão sediados fora do Brasil (EUA e Europa). Essas transferências são realizadas com base no Art. 33 da LGPD e nos mecanismos de proteção oferecidos por cada operador, incluindo cláusulas contratuais padrão (SCCs) e certificações de segurança quando aplicáveis. Todos os dados trafegam com criptografia em trânsito (TLS).</p>
 
-            <h2>9. Segurança de Dados</h2>
-            <p>
-                Implementamos medidas técnicas e organizacionais apropriadas para proteger seus dados pessoais contra:
-            </p>
-            <ul>
-                <li>Acesso não autorizado;</li>
-                <li>Alteração, perda ou destruição acidental;</li>
-                <li>Processamento ilícito ou não autorizado.</li>
-            </ul>
+    <h2>14. Informações sobre Encarregado de Proteção de Dados (DPO)</h2>
+    <p>Para questões relacionadas à proteção de dados, entre em contato diretamente conosco:</p>
+    <div class="contact-box">
+      <h3>Contato para Privacidade</h3>
+      <p><strong>Radar de Perfil</strong></p>
+      <p>Email: <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></p>
+      <p>Nos comprometemos a responder suas solicitações de privacidade em até 15 dias úteis.</p>
+    </div>
 
-            <p>
-                Estas medidas incluem:
-            </p>
-            <ul>
-                <li>Criptografia de dados em trânsito (HTTPS);</li>
-                <li>Armazenamento seguro de dados;</li>
-                <li>Acesso restrito ao pessoal autorizado;</li>
-                <li>Auditorias regulares de segurança;</li>
-                <li>Políticas de confidencialidade para parceiros.</li>
-            </ul>
+    <h2>15. Lei Aplicável</h2>
+    <p>Esta Política de Privacidade é regida pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) e demais legislações aplicáveis na República Federativa do Brasil.</p>
 
-            <p>
-                <strong>Nota:</strong> Embora utilizemos práticas padrão de segurança, nenhum método de transmissão
-                pela internet ou armazenamento eletrônico é 100% seguro. Não podemos garantir segurança absoluta,
-                mas nos comprometemos com a proteção máxima.
-            </p>
+    <h2>16. Fale Conosco</h2>
+    <p>Se você tiver dúvidas, preocupações ou desejar exercer seus direitos conforme a LGPD, entre em contato conosco:</p>
+    <div class="contact-box">
+      <h3>Entre em Contato</h3>
+      <p><strong>Email:</strong> <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></p>
+      <p><strong>Site:</strong> <a href="https://radardeperfil.com.br" target="_blank" rel="noopener">radardeperfil.com.br</a></p>
+      <p><strong>Localização:</strong> Brasil</p>
+      <p style="margin-top: 12px; font-size: 14px; color: var(--rdp-muted);">Tempo de resposta esperado: até 15 dias úteis</p>
+    </div>
 
-            <h2>10. Cookies e Tecnologias de Rastreamento</h2>
-            <p>
-                <strong>Radar de Perfil NÃO utiliza cookies para rastreamento ou fins de publicidade.</strong>
-            </p>
-            <p>
-                Podemos utilizar cookies técnicos essenciais apenas para:
-            </p>
-            <ul>
-                <li>Manter sua sessão ativa no formulário;</li>
-                <li>Funcionalidades básicas do site.</li>
-            </ul>
+    <h2>17. Conformidade com LGPD</h2>
+    <div class="highlight">
+      <strong>Compromisso com LGPD:</strong> Radar de Perfil está em conformidade total com a Lei Geral de Proteção de Dados Pessoais (LGPD). Tratamos seus dados com transparência, proporcionalidade e respeito aos seus direitos fundamentais. Seus dados são sua propriedade, e estamos aqui para protegê-los.
+    </div>
 
-            <p>
-                <strong>Não usamos:</strong>
-            </p>
-            <ul>
-                <li>Google Analytics ou ferramentas de rastreamento similares;</li>
-                <li>Cookies de publicidade ou marketing;</li>
-                <li>Tecnologias de identificação do dispositivo.</li>
-            </ul>
+    <div class="doc-end">
+      Documento válido a partir de 2 de maio de 2026 · Versão 3.2<br>
+      Radar de Perfil · Auditoria de Perfil Profissional · Brasil
+    </div>
+  </div>
+</main>
 
-            <h2>11. Proteção de Menores de Idade</h2>
-            <p>
-                Nosso serviço não é direcionado a menores de 18 anos. Não coletamos intencionalmente dados de menores de idade.
-                Se descobrirmos que coletamos dados de menores sem consentimento parental apropriado, excluiremos imediatamente
-                esses dados.
-            </p>
+<footer class="site-footer">
+  <div class="wrap-wide footer-row">
+    <div>Radar de Perfil &copy; 2026</div>
+    <div>
+      <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a>
+      <a href="./index.html">Início</a>
+      <a href="./termos-uso.html">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
 
-            <h2>12. Alterações nesta Política</h2>
-            <p>
-                Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas,
-                tecnologia ou legislação. Quando fizermos alterações significativas, notificaremos você por email ou através
-                de avisos destacados no site.
-            </p>
-            <p>
-                Sua continuação de uso do serviço após notificação de alterações constitui aceitação das mudanças.
-            </p>
+<!-- Cloudflare Web Analytics -->
+<script>
+(function(){
+  try {
+    var url = new URL(window.location.href);
+    if (url.searchParams.get('notrack') === '1') {
+      var d = new Date();
+      d.setTime(d.getTime() + (5 * 365 * 24 * 60 * 60 * 1000));
+      document.cookie = 'radar_no_track=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+      url.searchParams.delete('notrack');
+      var clean = url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash;
+      window.history.replaceState({}, document.title, clean);
+      return;
+    }
+  } catch(e) {}
+  if (document.cookie.indexOf('radar_no_track=1') !== -1) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "b0ce06e6d5444211963edf6a0dc0fbaf"}');
+  document.head.appendChild(s);
+})();
+</script>
 
-            <h2>13. Transferências Internacionais de Dados</h2>
-            <p>
-                Alguns dos nossos operadores estão sediados fora do Brasil (EUA e Europa). Essas transferências são realizadas
-                com base no Art. 33 da LGPD e nos mecanismos de proteção oferecidos por cada operador, incluindo cláusulas
-                contratuais padrão (SCCs) e certificações de segurança quando aplicáveis. Todos os dados trafegam com
-                criptografia em trânsito (TLS).
-            </p>
-
-            <h2>14. Informações sobre Encarregado de Proteção de Dados (DPO)</h2>
-            <p>
-                Para questões relacionadas à proteção de dados, entre em contato diretamente conosco:
-            </p>
-            <div class="contact-box">
-                <h3>Contato para Privacidade</h3>
-                <p><strong>Radar de Perfil</strong></p>
-                <p>Email: <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></p>
-                <p>Nos comprometemos a responder suas solicitações de privacidade em até 15 dias úteis.</p>
-            </div>
-
-            <h2>15. Lei Aplicável</h2>
-            <p>
-                Esta Política de Privacidade é regida pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018)
-                e demais legislações aplicáveis na República Federativa do Brasil.
-            </p>
-
-            <h2>16. Fale Conosco</h2>
-            <p>
-                Se você tiver dúvidas, preocupações ou desejar exercer seus direitos conforme a LGPD,
-                entre em contato conosco:
-            </p>
-
-            <div class="contact-box">
-                <h3>Entre em Contato</h3>
-                <p><strong>Email:</strong> <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a></p>
-                <p><strong>Site:</strong> <a href="https://radardeperfil.com.br" target="_blank">radardeperfil.com.br</a></p>
-                <p><strong>Localização:</strong> Brasil</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">
-                    Tempo de resposta esperado: até 15 dias úteis
-                </p>
-            </div>
-
-            <h2>17. Conformidade com LGPD</h2>
-            <div class="highlight">
-                <strong>Compromisso com LGPD:</strong>
-                Radar de Perfil está em conformidade total com a Lei Geral de Proteção de Dados Pessoais (LGPD).
-                Tratamos seus dados com transparência, proporcionalidade e respeito aos seus direitos fundamentais.
-                Seus dados são sua propriedade, e estamos aqui para protegê-los.
-            </div>
-
-            <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e0e0e0;">
-
-            <p style="text-align: center; color: #999; font-size: 0.9rem; margin-top: 2rem;">
-                <strong>Documento válido a partir de 2 de abril de 2026 · Versão 3.1</strong><br>
-                Radar de Perfil - Auditoria de Perfil Profissional<br>
-                Brasil
-            </p>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Radar de Perfil. Todos os direitos reservados.</p>
-        <p>
-            <a href="./index.html">Início</a> |
-            <a href="mailto:contato@radardeperfil.com.br">Contato</a> |
-            <a href="https://radardeperfil.com.br/politica-privacidade.html">Política de Privacidade</a>
-        </p>
-        <p style="margin-top: 1rem; font-size: 0.85rem;">
-            Radar de Perfil | Brasil
-        </p>
-    </footer>
 </body>
 </html>

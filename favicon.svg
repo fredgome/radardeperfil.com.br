@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Radar de Perfil">
+  <title>Radar de Perfil</title>
+  
+  <rect width="64" height="64" rx="10" fill="#ffffff"></rect>
+  
+  <rect x="0.5" y="0.5" width="63" height="63" rx="9.5" fill="none" stroke="#e8e6df"></rect>
+  
+  
+  <text x="32" y="42" text-anchor="middle" font-family="&#39;Lora&#39;, Georgia, serif" font-weight="600" font-size="30" letter-spacing="-0.04em">
+    <tspan fill="#0f1715">R</tspan><tspan fill="#0a3d3a">P</tspan>
+  </text>
+  
+  <circle cx="51" cy="51" r="2.6" fill="#0a3d3a"></circle>
+</svg>
