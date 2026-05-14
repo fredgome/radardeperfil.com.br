@@ -678,7 +678,7 @@
 
 <hr class="divider">
 
-<section class="soft">
+<section class="soft" id="rdp-price-section">
   <div class="wrap">
     <div class="eyebrow">Por que R$297</div>
     <h2>Onde o Radar fica em relação a outras formas de resolver isso.</h2>
@@ -836,6 +836,83 @@
 })();
 </script>
 
+
+<!-- Plausible Analytics — RDP B2 Instrumentation -->
+<script>
+(function(){
+  'use strict';
+  // ── NOTRACK GUARD ──────────────────────────────────────────────
+  try {
+    if (window.location.search.indexOf('notrack=1') !== -1) {
+      var d = new Date();
+      d.setTime(d.getTime() + (5 * 365 * 24 * 60 * 60 * 1000));
+      document.cookie = 'radar_no_track=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+      try { localStorage.setItem('plausible_ignore', 'true'); } catch(e) {}
+      var u = new URL(window.location.href);
+      u.searchParams.delete('notrack');
+      var clean = u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : '') + u.hash;
+      if (history.replaceState) history.replaceState({}, document.title, clean);
+    }
+  } catch(e) {}
+  if (document.cookie.indexOf('radar_no_track=1') !== -1) {
+    try { localStorage.setItem('plausible_ignore', 'true'); } catch(e) {}
+    return;
+  }
+  // ── SNIPPET OFICIAL PLAUSIBLE ───────────────────────────────────
+  window.plausible = window.plausible || function() {
+    (plausible.q = plausible.q || []).push(arguments);
+  };
+  plausible.init = plausible.init || function(i) { plausible.o = i || {}; };
+  plausible.init();
+  var ps = document.createElement('script');
+  ps.async = true;
+  ps.src = 'https://plausible.io/js/pa-iwybM668qRMdjWmT-gx92.js';
+  document.head.appendChild(ps);
+  // ── EVENTOS ────────────────────────────────────────────────────
+  function fire(name) {
+    try { if (typeof window.plausible === 'function') window.plausible(name); } catch(e) {}
+  }
+  document.querySelectorAll('a[href*="laudo-exemplo"]').forEach(function(el) {
+    el.addEventListener('click', function() { fire('rdp_sample_report_click'); });
+  });
+  document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      fire('rdp_cta_primary_click');
+      fire('rdp_checkout_click');
+    });
+  });
+  var rdpScroll50 = false;
+  window.addEventListener('scroll', function() {
+    if (rdpScroll50) return;
+    var scrolled = window.scrollY || window.pageYOffset || 0;
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    if (total > 0 && (scrolled / total) >= 0.5) {
+      rdpScroll50 = true;
+      fire('rdp_scroll_50');
+    }
+  }, { passive: true });
+  (function() {
+    var el = document.getElementById('rdp-price-section');
+    if (!el || !('IntersectionObserver' in window)) return;
+    var fired = false;
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !fired) {
+          fired = true;
+          fire('rdp_price_section_view');
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+    obs.observe(el);
+  })();
+  document.querySelectorAll('details').forEach(function(det) {
+    det.addEventListener('toggle', function() {
+      if (det.open) fire('rdp_faq_click');
+    });
+  });
+})();
+</script>
 </body>
 </html>
 >
