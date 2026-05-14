@@ -464,5 +464,37 @@
 })();
 </script>
 
+
+<!-- Plausible Analytics — RDP B2 Instrumentation -->
+<script>
+(function(){
+  'use strict';
+  try {
+    if (window.location.search.indexOf('notrack=1') !== -1) {
+      var d = new Date();
+      d.setTime(d.getTime() + (5 * 365 * 24 * 60 * 60 * 1000));
+      document.cookie = 'radar_no_track=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+      try { localStorage.setItem('plausible_ignore', 'true'); } catch(e) {}
+      var u = new URL(window.location.href);
+      u.searchParams.delete('notrack');
+      var clean = u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : '') + u.hash;
+      if (history.replaceState) history.replaceState({}, document.title, clean);
+    }
+  } catch(e) {}
+  if (document.cookie.indexOf('radar_no_track=1') !== -1) {
+    try { localStorage.setItem('plausible_ignore', 'true'); } catch(e) {}
+    return;
+  }
+  window.plausible = window.plausible || function() {
+    (plausible.q = plausible.q || []).push(arguments);
+  };
+  plausible.init = plausible.init || function(i) { plausible.o = i || {}; };
+  plausible.init();
+  var ps = document.createElement('script');
+  ps.async = true;
+  ps.src = 'https://plausible.io/js/pa-iwybM668qRMdjWmT-gx92.js';
+  document.head.appendChild(ps);
+})();
+</script>
 </body>
 </html>
