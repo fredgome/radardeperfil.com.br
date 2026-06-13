@@ -100,6 +100,30 @@
     .brand-chip { display: none; }
   }
 
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .nav-link {
+    color: var(--rdp-ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-link:hover {
+    color: var(--rdp-teal);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  @media (max-width: 520px) {
+    .header-row { padding: 0 18px; }
+    .header-actions { gap: 12px; }
+    .nav-link { font-size: 13px; }
+    .header-actions .btn { padding: 9px 14px !important; font-size: 13px !important; }
+  }
+
   section { padding: 56px 0; }
   @media (min-width: 720px) { section { padding: 90px 0; } }
   .soft { background-color: var(--rdp-paper); }
@@ -460,10 +484,13 @@
 <header>
   <div class="header-row">
     <div class="header-brand-group">
-      <a href="#" class="brand">Radar de Perfil</a>
+      <a href="/" class="brand">Radar de Perfil</a>
       <span class="brand-chip">§ RDP</span>
     </div>
-    <a href="/laudo-exemplo.html" class="btn" style="padding:10px 20px; font-size:14px;" target="_blank" rel="noopener">Ver exemplo</a>
+    <div class="header-actions">
+      <a href="/blog/" class="nav-link">Artigos</a>
+      <a href="/laudo-exemplo.html" class="btn" style="padding:10px 20px; font-size:14px;" target="_blank" rel="noopener">Ver exemplo</a>
+    </div>
   </div>
 </header>
 
@@ -795,6 +822,7 @@
   <div class="wrap-wide footer-row">
     <div>Radar de Perfil &copy; 2026</div>
     <div>
+      <a href="/blog/">Artigos</a>
       <a href="mailto:contato@radardeperfil.com.br">contato@radardeperfil.com.br</a>
       <a href="/politica-privacidade.html">Política de Privacidade</a>
       <a href="/termos-uso.html">Termos de Uso</a>
